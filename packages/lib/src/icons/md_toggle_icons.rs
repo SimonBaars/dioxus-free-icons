@@ -1,7 +1,7 @@
 use super::super::IconShape;
 use dioxus::prelude::*;
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdIndeterminateCheckBox;
 impl IconShape for MdIndeterminateCheckBox {
     fn view_box(&self) -> String {
@@ -10,7 +10,7 @@ impl IconShape for MdIndeterminateCheckBox {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -23,7 +23,7 @@ impl IconShape for MdIndeterminateCheckBox {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdStarBorder;
 impl IconShape for MdStarBorder {
     fn view_box(&self) -> String {
@@ -32,7 +32,7 @@ impl IconShape for MdStarBorder {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -44,7 +44,7 @@ impl IconShape for MdStarBorder {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdRadioButtonUnchecked;
 impl IconShape for MdRadioButtonUnchecked {
     fn view_box(&self) -> String {
@@ -53,7 +53,7 @@ impl IconShape for MdRadioButtonUnchecked {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -65,7 +65,7 @@ impl IconShape for MdRadioButtonUnchecked {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdCheckBoxOutlineBlank;
 impl IconShape for MdCheckBoxOutlineBlank {
     fn view_box(&self) -> String {
@@ -74,7 +74,7 @@ impl IconShape for MdCheckBoxOutlineBlank {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -86,7 +86,7 @@ impl IconShape for MdCheckBoxOutlineBlank {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdStarHalf;
 impl IconShape for MdStarHalf {
     fn view_box(&self) -> String {
@@ -95,7 +95,7 @@ impl IconShape for MdStarHalf {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -109,7 +109,7 @@ impl IconShape for MdStarHalf {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdRadioButtonChecked;
 impl IconShape for MdRadioButtonChecked {
     fn view_box(&self) -> String {
@@ -118,7 +118,7 @@ impl IconShape for MdRadioButtonChecked {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -130,7 +130,7 @@ impl IconShape for MdRadioButtonChecked {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdToggleOn;
 impl IconShape for MdToggleOn {
     fn view_box(&self) -> String {
@@ -139,7 +139,7 @@ impl IconShape for MdToggleOn {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -151,7 +151,7 @@ impl IconShape for MdToggleOn {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdToggleOff;
 impl IconShape for MdToggleOff {
     fn view_box(&self) -> String {
@@ -160,7 +160,7 @@ impl IconShape for MdToggleOff {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -172,7 +172,7 @@ impl IconShape for MdToggleOff {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdStar;
 impl IconShape for MdStar {
     fn view_box(&self) -> String {
@@ -181,7 +181,7 @@ impl IconShape for MdStar {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -196,7 +196,7 @@ impl IconShape for MdStar {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdStarOutline;
 impl IconShape for MdStarOutline {
     fn view_box(&self) -> String {
@@ -205,7 +205,7 @@ impl IconShape for MdStarOutline {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z",
@@ -214,7 +214,7 @@ impl IconShape for MdStarOutline {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdCheckBox;
 impl IconShape for MdCheckBox {
     fn view_box(&self) -> String {
@@ -223,7 +223,7 @@ impl IconShape for MdCheckBox {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",

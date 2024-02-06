@@ -1,7 +1,7 @@
 use super::super::IconShape;
 use dioxus::prelude::*;
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdErrorOutline;
 impl IconShape for MdErrorOutline {
     fn view_box(&self) -> String {
@@ -10,7 +10,7 @@ impl IconShape for MdErrorOutline {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0V0z",
@@ -22,7 +22,7 @@ impl IconShape for MdErrorOutline {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdAddAlert;
 impl IconShape for MdAddAlert {
     fn view_box(&self) -> String {
@@ -31,7 +31,7 @@ impl IconShape for MdAddAlert {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0V0z",
@@ -43,7 +43,7 @@ impl IconShape for MdAddAlert {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdNotificationImportant;
 impl IconShape for MdNotificationImportant {
     fn view_box(&self) -> String {
@@ -52,7 +52,7 @@ impl IconShape for MdNotificationImportant {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0V0z",
@@ -64,7 +64,7 @@ impl IconShape for MdNotificationImportant {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdWarning;
 impl IconShape for MdWarning {
     fn view_box(&self) -> String {
@@ -73,7 +73,7 @@ impl IconShape for MdWarning {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -85,7 +85,7 @@ impl IconShape for MdWarning {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdAutoDelete;
 impl IconShape for MdAutoDelete {
     fn view_box(&self) -> String {
@@ -94,7 +94,7 @@ impl IconShape for MdAutoDelete {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -113,7 +113,7 @@ impl IconShape for MdAutoDelete {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdError;
 impl IconShape for MdError {
     fn view_box(&self) -> String {
@@ -122,7 +122,7 @@ impl IconShape for MdError {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",

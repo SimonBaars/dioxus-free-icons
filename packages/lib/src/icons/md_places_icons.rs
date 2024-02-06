@@ -1,7 +1,7 @@
 use super::super::IconShape;
 use dioxus::prelude::*;
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdChildCare;
 impl IconShape for MdChildCare {
     fn view_box(&self) -> String {
@@ -10,7 +10,7 @@ impl IconShape for MdChildCare {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -32,7 +32,7 @@ impl IconShape for MdChildCare {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdMicrowave;
 impl IconShape for MdMicrowave {
     fn view_box(&self) -> String {
@@ -41,7 +41,7 @@ impl IconShape for MdMicrowave {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -54,7 +54,7 @@ impl IconShape for MdMicrowave {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdMeetingRoom;
 impl IconShape for MdMeetingRoom {
     fn view_box(&self) -> String {
@@ -63,7 +63,7 @@ impl IconShape for MdMeetingRoom {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M14 6v15H3v-2h2V3h9v1h5v15h2v2h-4V6h-3zm-4 5v2h2v-2h-2z",
@@ -72,7 +72,7 @@ impl IconShape for MdMeetingRoom {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdBeachAccess;
 impl IconShape for MdBeachAccess {
     fn view_box(&self) -> String {
@@ -81,7 +81,7 @@ impl IconShape for MdBeachAccess {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -93,7 +93,7 @@ impl IconShape for MdBeachAccess {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdDry;
 impl IconShape for MdDry {
     fn view_box(&self) -> String {
@@ -102,7 +102,7 @@ impl IconShape for MdDry {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -115,7 +115,7 @@ impl IconShape for MdDry {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdWaterDamage;
 impl IconShape for MdWaterDamage {
     fn view_box(&self) -> String {
@@ -124,7 +124,7 @@ impl IconShape for MdWaterDamage {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -137,7 +137,7 @@ impl IconShape for MdWaterDamage {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdFireExtinguisher;
 impl IconShape for MdFireExtinguisher {
     fn view_box(&self) -> String {
@@ -146,7 +146,7 @@ impl IconShape for MdFireExtinguisher {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -159,7 +159,7 @@ impl IconShape for MdFireExtinguisher {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdRvHookup;
 impl IconShape for MdRvHookup {
     fn view_box(&self) -> String {
@@ -168,7 +168,7 @@ impl IconShape for MdRvHookup {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -183,7 +183,7 @@ impl IconShape for MdRvHookup {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdTty;
 impl IconShape for MdTty {
     fn view_box(&self) -> String {
@@ -192,7 +192,7 @@ impl IconShape for MdTty {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -206,7 +206,7 @@ impl IconShape for MdTty {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdRoomService;
 impl IconShape for MdRoomService {
     fn view_box(&self) -> String {
@@ -215,7 +215,7 @@ impl IconShape for MdRoomService {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0V0z",
@@ -227,7 +227,7 @@ impl IconShape for MdRoomService {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdDoNotTouch;
 impl IconShape for MdDoNotTouch {
     fn view_box(&self) -> String {
@@ -236,7 +236,7 @@ impl IconShape for MdDoNotTouch {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -249,7 +249,7 @@ impl IconShape for MdDoNotTouch {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdStorefront;
 impl IconShape for MdStorefront {
     fn view_box(&self) -> String {
@@ -258,7 +258,7 @@ impl IconShape for MdStorefront {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -271,7 +271,7 @@ impl IconShape for MdStorefront {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdEscalator;
 impl IconShape for MdEscalator {
     fn view_box(&self) -> String {
@@ -280,7 +280,7 @@ impl IconShape for MdEscalator {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -293,7 +293,7 @@ impl IconShape for MdEscalator {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdSmokingRooms;
 impl IconShape for MdSmokingRooms {
     fn view_box(&self) -> String {
@@ -302,7 +302,7 @@ impl IconShape for MdSmokingRooms {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -314,7 +314,7 @@ impl IconShape for MdSmokingRooms {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdCountertops;
 impl IconShape for MdCountertops {
     fn view_box(&self) -> String {
@@ -323,7 +323,7 @@ impl IconShape for MdCountertops {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -336,7 +336,7 @@ impl IconShape for MdCountertops {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdStroller;
 impl IconShape for MdStroller {
     fn view_box(&self) -> String {
@@ -345,7 +345,7 @@ impl IconShape for MdStroller {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -371,7 +371,7 @@ impl IconShape for MdStroller {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdSportsBar;
 impl IconShape for MdSportsBar {
     fn view_box(&self) -> String {
@@ -380,7 +380,7 @@ impl IconShape for MdSportsBar {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -393,7 +393,7 @@ impl IconShape for MdSportsBar {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdAllInclusive;
 impl IconShape for MdAllInclusive {
     fn view_box(&self) -> String {
@@ -402,7 +402,7 @@ impl IconShape for MdAllInclusive {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0V0z",
@@ -414,7 +414,7 @@ impl IconShape for MdAllInclusive {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdBusinessCenter;
 impl IconShape for MdBusinessCenter {
     fn view_box(&self) -> String {
@@ -423,7 +423,7 @@ impl IconShape for MdBusinessCenter {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0zm10 5h4v2h-4zm0 0h4v2h-4z",
@@ -435,7 +435,7 @@ impl IconShape for MdBusinessCenter {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdHouseSiding;
 impl IconShape for MdHouseSiding {
     fn view_box(&self) -> String {
@@ -444,7 +444,7 @@ impl IconShape for MdHouseSiding {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -457,7 +457,7 @@ impl IconShape for MdHouseSiding {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdCarpenter;
 impl IconShape for MdCarpenter {
     fn view_box(&self) -> String {
@@ -466,7 +466,7 @@ impl IconShape for MdCarpenter {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -479,7 +479,7 @@ impl IconShape for MdCarpenter {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdFreeBreakfast;
 impl IconShape for MdFreeBreakfast {
     fn view_box(&self) -> String {
@@ -488,7 +488,7 @@ impl IconShape for MdFreeBreakfast {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0V0z",
@@ -500,7 +500,7 @@ impl IconShape for MdFreeBreakfast {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdEscalatorWarning;
 impl IconShape for MdEscalatorWarning {
     fn view_box(&self) -> String {
@@ -509,7 +509,7 @@ impl IconShape for MdEscalatorWarning {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -522,7 +522,7 @@ impl IconShape for MdEscalatorWarning {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdGrass;
 impl IconShape for MdGrass {
     fn view_box(&self) -> String {
@@ -531,7 +531,7 @@ impl IconShape for MdGrass {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -544,7 +544,7 @@ impl IconShape for MdGrass {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdGolfCourse;
 impl IconShape for MdGolfCourse {
     fn view_box(&self) -> String {
@@ -553,7 +553,7 @@ impl IconShape for MdGolfCourse {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0V0z",
@@ -570,7 +570,7 @@ impl IconShape for MdGolfCourse {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdCasino;
 impl IconShape for MdCasino {
     fn view_box(&self) -> String {
@@ -579,7 +579,7 @@ impl IconShape for MdCasino {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0zm21.02 19c0 1.1-.9 2-2 2h-14c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14z",
@@ -591,7 +591,7 @@ impl IconShape for MdCasino {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdTapas;
 impl IconShape for MdTapas {
     fn view_box(&self) -> String {
@@ -600,7 +600,7 @@ impl IconShape for MdTapas {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -613,7 +613,7 @@ impl IconShape for MdTapas {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdChargingStation;
 impl IconShape for MdChargingStation {
     fn view_box(&self) -> String {
@@ -622,7 +622,7 @@ impl IconShape for MdChargingStation {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -635,7 +635,7 @@ impl IconShape for MdChargingStation {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdSmokeFree;
 impl IconShape for MdSmokeFree {
     fn view_box(&self) -> String {
@@ -644,7 +644,7 @@ impl IconShape for MdSmokeFree {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -656,7 +656,7 @@ impl IconShape for MdSmokeFree {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdFoundation;
 impl IconShape for MdFoundation {
     fn view_box(&self) -> String {
@@ -665,7 +665,7 @@ impl IconShape for MdFoundation {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -678,7 +678,7 @@ impl IconShape for MdFoundation {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdNoStroller;
 impl IconShape for MdNoStroller {
     fn view_box(&self) -> String {
@@ -687,7 +687,7 @@ impl IconShape for MdNoStroller {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -700,7 +700,7 @@ impl IconShape for MdNoStroller {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdCorporateFare;
 impl IconShape for MdCorporateFare {
     fn view_box(&self) -> String {
@@ -709,7 +709,7 @@ impl IconShape for MdCorporateFare {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -722,7 +722,7 @@ impl IconShape for MdCorporateFare {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdNoDrinks;
 impl IconShape for MdNoDrinks {
     fn view_box(&self) -> String {
@@ -731,7 +731,7 @@ impl IconShape for MdNoDrinks {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -744,7 +744,7 @@ impl IconShape for MdNoDrinks {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdFamilyRestroom;
 impl IconShape for MdFamilyRestroom {
     fn view_box(&self) -> String {
@@ -753,7 +753,7 @@ impl IconShape for MdFamilyRestroom {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -766,7 +766,7 @@ impl IconShape for MdFamilyRestroom {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdCheckroom;
 impl IconShape for MdCheckroom {
     fn view_box(&self) -> String {
@@ -775,7 +775,7 @@ impl IconShape for MdCheckroom {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -788,7 +788,7 @@ impl IconShape for MdCheckroom {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdSoap;
 impl IconShape for MdSoap {
     fn view_box(&self) -> String {
@@ -797,7 +797,7 @@ impl IconShape for MdSoap {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -810,7 +810,7 @@ impl IconShape for MdSoap {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdRoofing;
 impl IconShape for MdRoofing {
     fn view_box(&self) -> String {
@@ -819,7 +819,7 @@ impl IconShape for MdRoofing {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -832,7 +832,7 @@ impl IconShape for MdRoofing {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdNightShelter;
 impl IconShape for MdNightShelter {
     fn view_box(&self) -> String {
@@ -841,7 +841,7 @@ impl IconShape for MdNightShelter {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -854,7 +854,7 @@ impl IconShape for MdNightShelter {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdDoNotStep;
 impl IconShape for MdDoNotStep {
     fn view_box(&self) -> String {
@@ -863,7 +863,7 @@ impl IconShape for MdDoNotStep {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -876,7 +876,7 @@ impl IconShape for MdDoNotStep {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdSpa;
 impl IconShape for MdSpa {
     fn view_box(&self) -> String {
@@ -885,7 +885,7 @@ impl IconShape for MdSpa {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0V0zm13.97 21.49c-.63.23-1.29.4-1.97.51.68-.12 1.33-.29 1.97-.51zM12 22c-.68-.12-1.33-.29-1.97-.51.64.22 1.29.39 1.97.51z",
@@ -900,7 +900,7 @@ impl IconShape for MdSpa {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdAcUnit;
 impl IconShape for MdAcUnit {
     fn view_box(&self) -> String {
@@ -909,7 +909,7 @@ impl IconShape for MdAcUnit {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -921,7 +921,7 @@ impl IconShape for MdAcUnit {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdNoFood;
 impl IconShape for MdNoFood {
     fn view_box(&self) -> String {
@@ -930,7 +930,7 @@ impl IconShape for MdNoFood {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -943,7 +943,7 @@ impl IconShape for MdNoFood {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdRoomPreferences;
 impl IconShape for MdRoomPreferences {
     fn view_box(&self) -> String {
@@ -952,7 +952,7 @@ impl IconShape for MdRoomPreferences {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -965,7 +965,7 @@ impl IconShape for MdRoomPreferences {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdNoBackpack;
 impl IconShape for MdNoBackpack {
     fn view_box(&self) -> String {
@@ -974,7 +974,7 @@ impl IconShape for MdNoBackpack {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -988,7 +988,7 @@ impl IconShape for MdNoBackpack {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdChildFriendly;
 impl IconShape for MdChildFriendly {
     fn view_box(&self) -> String {
@@ -997,7 +997,7 @@ impl IconShape for MdChildFriendly {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -1009,7 +1009,7 @@ impl IconShape for MdChildFriendly {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdHotTub;
 impl IconShape for MdHotTub {
     fn view_box(&self) -> String {
@@ -1018,7 +1018,7 @@ impl IconShape for MdHotTub {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -1035,7 +1035,7 @@ impl IconShape for MdHotTub {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdFence;
 impl IconShape for MdFence {
     fn view_box(&self) -> String {
@@ -1044,7 +1044,7 @@ impl IconShape for MdFence {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -1057,7 +1057,7 @@ impl IconShape for MdFence {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdRiceBowl;
 impl IconShape for MdRiceBowl {
     fn view_box(&self) -> String {
@@ -1066,7 +1066,7 @@ impl IconShape for MdRiceBowl {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -1079,7 +1079,7 @@ impl IconShape for MdRiceBowl {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdNoPhotography;
 impl IconShape for MdNoPhotography {
     fn view_box(&self) -> String {
@@ -1088,7 +1088,7 @@ impl IconShape for MdNoPhotography {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -1101,7 +1101,7 @@ impl IconShape for MdNoPhotography {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdBento;
 impl IconShape for MdBento {
     fn view_box(&self) -> String {
@@ -1110,7 +1110,7 @@ impl IconShape for MdBento {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -1123,7 +1123,7 @@ impl IconShape for MdBento {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdNoCell;
 impl IconShape for MdNoCell {
     fn view_box(&self) -> String {
@@ -1132,7 +1132,7 @@ impl IconShape for MdNoCell {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -1145,7 +1145,7 @@ impl IconShape for MdNoCell {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdUmbrella;
 impl IconShape for MdUmbrella {
     fn view_box(&self) -> String {
@@ -1154,7 +1154,7 @@ impl IconShape for MdUmbrella {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -1167,7 +1167,7 @@ impl IconShape for MdUmbrella {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdHouse;
 impl IconShape for MdHouse {
     fn view_box(&self) -> String {
@@ -1176,7 +1176,7 @@ impl IconShape for MdHouse {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -1189,7 +1189,7 @@ impl IconShape for MdHouse {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdBabyChangingStation;
 impl IconShape for MdBabyChangingStation {
     fn view_box(&self) -> String {
@@ -1198,7 +1198,7 @@ impl IconShape for MdBabyChangingStation {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -1211,7 +1211,7 @@ impl IconShape for MdBabyChangingStation {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdBathtub;
 impl IconShape for MdBathtub {
     fn view_box(&self) -> String {
@@ -1220,7 +1220,7 @@ impl IconShape for MdBathtub {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -1238,7 +1238,7 @@ impl IconShape for MdBathtub {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdWash;
 impl IconShape for MdWash {
     fn view_box(&self) -> String {
@@ -1247,7 +1247,7 @@ impl IconShape for MdWash {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -1260,7 +1260,7 @@ impl IconShape for MdWash {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdAirportShuttle;
 impl IconShape for MdAirportShuttle {
     fn view_box(&self) -> String {
@@ -1269,7 +1269,7 @@ impl IconShape for MdAirportShuttle {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -1281,7 +1281,7 @@ impl IconShape for MdAirportShuttle {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdNoFlash;
 impl IconShape for MdNoFlash {
     fn view_box(&self) -> String {
@@ -1290,7 +1290,7 @@ impl IconShape for MdNoFlash {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -1303,7 +1303,7 @@ impl IconShape for MdNoFlash {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdBackpack;
 impl IconShape for MdBackpack {
     fn view_box(&self) -> String {
@@ -1312,7 +1312,7 @@ impl IconShape for MdBackpack {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -1326,7 +1326,7 @@ impl IconShape for MdBackpack {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdFoodBank;
 impl IconShape for MdFoodBank {
     fn view_box(&self) -> String {
@@ -1335,7 +1335,7 @@ impl IconShape for MdFoodBank {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -1348,7 +1348,7 @@ impl IconShape for MdFoodBank {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdKitchen;
 impl IconShape for MdKitchen {
     fn view_box(&self) -> String {
@@ -1357,7 +1357,7 @@ impl IconShape for MdKitchen {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0V0z",
@@ -1369,7 +1369,7 @@ impl IconShape for MdKitchen {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdElevator;
 impl IconShape for MdElevator {
     fn view_box(&self) -> String {
@@ -1378,7 +1378,7 @@ impl IconShape for MdElevator {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -1391,7 +1391,7 @@ impl IconShape for MdElevator {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdApartment;
 impl IconShape for MdApartment {
     fn view_box(&self) -> String {
@@ -1400,7 +1400,7 @@ impl IconShape for MdApartment {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -1413,7 +1413,7 @@ impl IconShape for MdApartment {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdPool;
 impl IconShape for MdPool {
     fn view_box(&self) -> String {
@@ -1422,7 +1422,7 @@ impl IconShape for MdPool {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -1439,7 +1439,7 @@ impl IconShape for MdPool {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdStairs;
 impl IconShape for MdStairs {
     fn view_box(&self) -> String {
@@ -1448,7 +1448,7 @@ impl IconShape for MdStairs {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -1462,7 +1462,7 @@ impl IconShape for MdStairs {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdNoMeetingRoom;
 impl IconShape for MdNoMeetingRoom {
     fn view_box(&self) -> String {
@@ -1471,7 +1471,7 @@ impl IconShape for MdNoMeetingRoom {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M11 11h-1v2h2v-1l9.73 9.73L20.46 23 14 16.54V21H3v-2h2V7.54l-4-4 1.27-1.27L11 11zm3 .49L5.51 3H14v1h5v12.49l-2-2V6h-3v5.49z",
@@ -1480,7 +1480,7 @@ impl IconShape for MdNoMeetingRoom {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdWheelchairPickup;
 impl IconShape for MdWheelchairPickup {
     fn view_box(&self) -> String {
@@ -1489,7 +1489,7 @@ impl IconShape for MdWheelchairPickup {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -1503,7 +1503,7 @@ impl IconShape for MdWheelchairPickup {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdFitnessCenter;
 impl IconShape for MdFitnessCenter {
     fn view_box(&self) -> String {
@@ -1512,7 +1512,7 @@ impl IconShape for MdFitnessCenter {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",

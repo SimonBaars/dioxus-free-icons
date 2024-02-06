@@ -1,51 +1,71 @@
 use dioxus::prelude::*;
 
 /// Icon shape trait
-pub trait IconShape {
+pub trait IconShape: Clone {
     fn view_box(&self) -> String;
     fn xmlns(&self) -> String;
-    fn child_elements(&self) -> LazyNodes;
+    fn child_elements(&self) -> Element;
 }
-
-/// Icon component Props
-#[derive(PartialEq, Props)]
-pub struct IconProps<'a, T: IconShape> {
+#[derive(Clone, Props, PartialEq)]
+pub struct IconProps<T: IconShape + 'static + PartialEq> {
     /// The icon shape to use.
     pub icon: T,
     /// The height of the `<svg>` element. Defaults to 20.
-    #[props(default = 20)]
-    pub height: u32,
+    #[props(default = 20.to_string())]
+    pub height: String,
     /// The width of the `<svg>` element. Defaults to 20.
-    #[props(default = 20)]
-    pub width: u32,
+    #[props(default = 20.to_string())]
+    pub width: String,
     /// The color to use for filling the icon. Defaults to "currentColor".
-    #[props(default = "currentColor")]
-    pub fill: &'a str,
+    #[props(default = "currentColor".to_string())]
+    pub fill: String,
     /// An class for the `<svg>` element.
-    #[props(default = "")]
-    pub class: &'a str,
+    #[props(default)]
+    pub class: String,
     /// An accessible, short-text description for the icon.
-    #[props(default = "")]
-    pub title: &'a str,
+    #[props(default)]
+    pub title: String,
+}
+
+impl<T: IconShape + Clone + PartialEq> IconProps<T> {
+    pub fn new(
+        class: impl Into<String>,
+        height: impl Into<String>,
+        width: impl Into<String>,
+        fill: impl Into<String>,
+        title: impl Into<String>,
+        icon: T,
+    ) -> Self {
+        IconProps {
+            class: class.into(),
+            height: height.into(),
+            width: width.into(),
+            fill: fill.into(),
+            title: title.into(),
+            icon,
+        }
+    }
 }
 
 /// Icon component which generates SVG elements
 #[allow(non_snake_case)]
-pub fn Icon<'a, T: IconShape>(cx: Scope<'a, IconProps<'a, T>>) -> Element<'a> {
-    cx.render(rsx! {
+pub fn Icon<'a, T: IconShape + Clone + PartialEq>(props: IconProps<T>) -> Element {
+    rsx! {
         svg {
             stroke: "currentColor",
             stroke_width: "0",
-            class: format_args!("{}", cx.props.class),
-            height: format_args!("{}", cx.props.height),
-            width: format_args!("{}", cx.props.width),
-            view_box: format_args!("{}", cx.props.icon.view_box()),
-            xmlns: format_args!("{}", cx.props.icon.xmlns()),
-            fill: format_args!("{}", cx.props.fill),
+            class: format_args!("{}", props.class),
+            height: format_args!("{}", props.height),
+            width: format_args!("{}", props.width),
+            view_box: format_args!("{}", props.icon.view_box()),
+            xmlns: format_args!("{}", props.icon.xmlns()),
+            fill: format_args!("{}", props.fill),
             title {
-                "{cx.props.title}"
+                "{props.title}"
             }
-            cx.props.icon.child_elements()
+            {
+                props.icon.child_elements()
+            }
         }
-    })
+    }
 }

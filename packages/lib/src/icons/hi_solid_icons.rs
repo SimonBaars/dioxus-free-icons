@@ -1,7 +1,7 @@
 use super::super::IconShape;
 use dioxus::prelude::*;
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiHand;
 impl IconShape for HiHand {
     fn view_box(&self) -> String {
@@ -10,7 +10,7 @@ impl IconShape for HiHand {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -21,7 +21,7 @@ impl IconShape for HiHand {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiSearch;
 impl IconShape for HiSearch {
     fn view_box(&self) -> String {
@@ -30,7 +30,7 @@ impl IconShape for HiSearch {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -41,7 +41,7 @@ impl IconShape for HiSearch {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiArrowDown;
 impl IconShape for HiArrowDown {
     fn view_box(&self) -> String {
@@ -50,7 +50,7 @@ impl IconShape for HiArrowDown {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -61,7 +61,7 @@ impl IconShape for HiArrowDown {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiVolumeOff;
 impl IconShape for HiVolumeOff {
     fn view_box(&self) -> String {
@@ -70,7 +70,7 @@ impl IconShape for HiVolumeOff {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -86,7 +86,7 @@ impl IconShape for HiVolumeOff {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiDotsHorizontal;
 impl IconShape for HiDotsHorizontal {
     fn view_box(&self) -> String {
@@ -95,7 +95,7 @@ impl IconShape for HiDotsHorizontal {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M6 10C6 11.1046 5.10457 12 4 12C2.89543 12 2 11.1046 2 10C2 8.89543 2.89543 8 4 8C5.10457 8 6 8.89543 6 10Z",
@@ -110,7 +110,7 @@ impl IconShape for HiDotsHorizontal {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiScissors;
 impl IconShape for HiScissors {
     fn view_box(&self) -> String {
@@ -119,7 +119,7 @@ impl IconShape for HiScissors {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -133,7 +133,7 @@ impl IconShape for HiScissors {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCog;
 impl IconShape for HiCog {
     fn view_box(&self) -> String {
@@ -142,7 +142,7 @@ impl IconShape for HiCog {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -153,7 +153,7 @@ impl IconShape for HiCog {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCurrencyPound;
 impl IconShape for HiCurrencyPound {
     fn view_box(&self) -> String {
@@ -162,7 +162,7 @@ impl IconShape for HiCurrencyPound {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -173,7 +173,7 @@ impl IconShape for HiCurrencyPound {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiSortDescending;
 impl IconShape for HiSortDescending {
     fn view_box(&self) -> String {
@@ -182,7 +182,7 @@ impl IconShape for HiSortDescending {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M3 3C2.44772 3 2 3.44772 2 4C2 4.55228 2.44772 5 3 5H14C14.5523 5 15 4.55228 15 4C15 3.44772 14.5523 3 14 3H3Z",
@@ -200,7 +200,7 @@ impl IconShape for HiSortDescending {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiReply;
 impl IconShape for HiReply {
     fn view_box(&self) -> String {
@@ -209,7 +209,7 @@ impl IconShape for HiReply {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -220,7 +220,7 @@ impl IconShape for HiReply {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiThumbUp;
 impl IconShape for HiThumbUp {
     fn view_box(&self) -> String {
@@ -229,7 +229,7 @@ impl IconShape for HiThumbUp {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M2 10.5C2 9.67157 2.67157 9 3.5 9C4.32843 9 5 9.67157 5 10.5V16.5C5 17.3284 4.32843 18 3.5 18C2.67157 18 2 17.3284 2 16.5V10.5Z",
@@ -241,7 +241,7 @@ impl IconShape for HiThumbUp {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiTranslate;
 impl IconShape for HiTranslate {
     fn view_box(&self) -> String {
@@ -250,7 +250,7 @@ impl IconShape for HiTranslate {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -261,7 +261,7 @@ impl IconShape for HiTranslate {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiAdjustments;
 impl IconShape for HiAdjustments {
     fn view_box(&self) -> String {
@@ -270,7 +270,7 @@ impl IconShape for HiAdjustments {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M5 4C5 3.44772 4.55228 3 4 3C3.44772 3 3 3.44772 3 4V11.2676C2.4022 11.6134 2 12.2597 2 13C2 13.7403 2.4022 14.3866 3 14.7324V16C3 16.5523 3.44772 17 4 17C4.55228 17 5 16.5523 5 16V14.7324C5.5978 14.3866 6 13.7403 6 13C6 12.2597 5.5978 11.6134 5 11.2676V4Z",
@@ -285,7 +285,7 @@ impl IconShape for HiAdjustments {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiUser;
 impl IconShape for HiUser {
     fn view_box(&self) -> String {
@@ -294,7 +294,7 @@ impl IconShape for HiUser {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -305,7 +305,7 @@ impl IconShape for HiUser {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiViewGrid;
 impl IconShape for HiViewGrid {
     fn view_box(&self) -> String {
@@ -314,7 +314,7 @@ impl IconShape for HiViewGrid {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M5 3C3.89543 3 3 3.89543 3 5V7C3 8.10457 3.89543 9 5 9H7C8.10457 9 9 8.10457 9 7V5C9 3.89543 8.10457 3 7 3H5Z",
@@ -332,7 +332,7 @@ impl IconShape for HiViewGrid {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiReceiptTax;
 impl IconShape for HiReceiptTax {
     fn view_box(&self) -> String {
@@ -341,7 +341,7 @@ impl IconShape for HiReceiptTax {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -352,7 +352,7 @@ impl IconShape for HiReceiptTax {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiXCircle;
 impl IconShape for HiXCircle {
     fn view_box(&self) -> String {
@@ -361,7 +361,7 @@ impl IconShape for HiXCircle {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -372,7 +372,7 @@ impl IconShape for HiXCircle {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiViewList;
 impl IconShape for HiViewList {
     fn view_box(&self) -> String {
@@ -381,7 +381,7 @@ impl IconShape for HiViewList {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -392,7 +392,7 @@ impl IconShape for HiViewList {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiHome;
 impl IconShape for HiHome {
     fn view_box(&self) -> String {
@@ -401,7 +401,7 @@ impl IconShape for HiHome {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M10.7071 2.29289C10.3166 1.90237 9.68342 1.90237 9.29289 2.29289L2.29289 9.29289C1.90237 9.68342 1.90237 10.3166 2.29289 10.7071C2.68342 11.0976 3.31658 11.0976 3.70711 10.7071L4 10.4142V17C4 17.5523 4.44772 18 5 18H7C7.55228 18 8 17.5523 8 17V15C8 14.4477 8.44772 14 9 14H11C11.5523 14 12 14.4477 12 15V17C12 17.5523 12.4477 18 13 18H15C15.5523 18 16 17.5523 16 17V10.4142L16.2929 10.7071C16.6834 11.0976 17.3166 11.0976 17.7071 10.7071C18.0976 10.3166 18.0976 9.68342 17.7071 9.29289L10.7071 2.29289Z",
@@ -410,7 +410,7 @@ impl IconShape for HiHome {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiGlobeAlt;
 impl IconShape for HiGlobeAlt {
     fn view_box(&self) -> String {
@@ -419,7 +419,7 @@ impl IconShape for HiGlobeAlt {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -430,7 +430,7 @@ impl IconShape for HiGlobeAlt {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiChevronDoubleRight;
 impl IconShape for HiChevronDoubleRight {
     fn view_box(&self) -> String {
@@ -439,7 +439,7 @@ impl IconShape for HiChevronDoubleRight {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -455,7 +455,7 @@ impl IconShape for HiChevronDoubleRight {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiLibrary;
 impl IconShape for HiLibrary {
     fn view_box(&self) -> String {
@@ -464,7 +464,7 @@ impl IconShape for HiLibrary {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -475,7 +475,7 @@ impl IconShape for HiLibrary {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiChevronDown;
 impl IconShape for HiChevronDown {
     fn view_box(&self) -> String {
@@ -484,7 +484,7 @@ impl IconShape for HiChevronDown {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -495,7 +495,7 @@ impl IconShape for HiChevronDown {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiChevronDoubleLeft;
 impl IconShape for HiChevronDoubleLeft {
     fn view_box(&self) -> String {
@@ -504,7 +504,7 @@ impl IconShape for HiChevronDoubleLeft {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -515,7 +515,7 @@ impl IconShape for HiChevronDoubleLeft {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiLogout;
 impl IconShape for HiLogout {
     fn view_box(&self) -> String {
@@ -524,7 +524,7 @@ impl IconShape for HiLogout {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -535,7 +535,7 @@ impl IconShape for HiLogout {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiChip;
 impl IconShape for HiChip {
     fn view_box(&self) -> String {
@@ -544,7 +544,7 @@ impl IconShape for HiChip {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M13 7H7V13H13V7Z",
@@ -558,7 +558,7 @@ impl IconShape for HiChip {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiTicket;
 impl IconShape for HiTicket {
     fn view_box(&self) -> String {
@@ -567,7 +567,7 @@ impl IconShape for HiTicket {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M2 6C2 4.89543 2.89543 4 4 4H16C17.1046 4 18 4.89543 18 6V8C16.8954 8 16 8.89543 16 10C16 11.1046 16.8954 12 18 12V14C18 15.1046 17.1046 16 16 16H4C2.89543 16 2 15.1046 2 14V12C3.10457 12 4 11.1046 4 10C4 8.89543 3.10457 8 2 8V6Z",
@@ -576,7 +576,7 @@ impl IconShape for HiTicket {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiTag;
 impl IconShape for HiTag {
     fn view_box(&self) -> String {
@@ -585,7 +585,7 @@ impl IconShape for HiTag {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -596,7 +596,7 @@ impl IconShape for HiTag {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiBriefcase;
 impl IconShape for HiBriefcase {
     fn view_box(&self) -> String {
@@ -605,7 +605,7 @@ impl IconShape for HiBriefcase {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -619,7 +619,7 @@ impl IconShape for HiBriefcase {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiArrowCircleUp;
 impl IconShape for HiArrowCircleUp {
     fn view_box(&self) -> String {
@@ -628,7 +628,7 @@ impl IconShape for HiArrowCircleUp {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -639,7 +639,7 @@ impl IconShape for HiArrowCircleUp {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiSaveAs;
 impl IconShape for HiSaveAs {
     fn view_box(&self) -> String {
@@ -648,7 +648,7 @@ impl IconShape for HiSaveAs {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M9.70711 7.29289C9.31658 6.90237 8.68342 6.90237 8.29289 7.29289C7.90237 7.68342 7.90237 8.31658 8.29289 8.70711L11.2929 11.7071C11.6834 12.0976 12.3166 12.0976 12.7071 11.7071L15.7071 8.70711C16.0976 8.31658 16.0976 7.68342 15.7071 7.29289C15.3166 6.90237 14.6834 6.90237 14.2929 7.29289L13 8.58579L13 5H16C17.1046 5 18 5.89543 18 7V12C18 13.1046 17.1046 14 16 14H8C6.89543 14 6 13.1046 6 12V7C6 5.89543 6.89543 5 8 5H11L11 8.58579L9.70711 7.29289Z",
@@ -663,7 +663,7 @@ impl IconShape for HiSaveAs {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiDocumentSearch;
 impl IconShape for HiDocumentSearch {
     fn view_box(&self) -> String {
@@ -672,7 +672,7 @@ impl IconShape for HiDocumentSearch {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M4 4C4 2.89543 4.89543 2 6 2H10.5858C11.1162 2 11.6249 2.21071 12 2.58579L15.4142 6C15.7893 6.37507 16 6.88378 16 7.41421V16C16 17.1046 15.1046 18 14 18H12.4722C13.4223 16.9385 14 15.5367 14 14C14 10.6863 11.3137 8 8 8C6.46329 8 5.06151 8.57771 4 9.52779V4Z",
@@ -686,7 +686,7 @@ impl IconShape for HiDocumentSearch {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiMap;
 impl IconShape for HiMap {
     fn view_box(&self) -> String {
@@ -695,7 +695,7 @@ impl IconShape for HiMap {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -716,7 +716,7 @@ impl IconShape for HiMap {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiInbox;
 impl IconShape for HiInbox {
     fn view_box(&self) -> String {
@@ -725,7 +725,7 @@ impl IconShape for HiInbox {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -736,7 +736,7 @@ impl IconShape for HiInbox {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiMicrophone;
 impl IconShape for HiMicrophone {
     fn view_box(&self) -> String {
@@ -745,7 +745,7 @@ impl IconShape for HiMicrophone {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -756,7 +756,7 @@ impl IconShape for HiMicrophone {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiDatabase;
 impl IconShape for HiDatabase {
     fn view_box(&self) -> String {
@@ -765,7 +765,7 @@ impl IconShape for HiDatabase {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M3 12V15C3 16.6569 6.13401 18 10 18C13.866 18 17 16.6569 17 15V12C17 13.6569 13.866 15 10 15C6.13401 15 3 13.6569 3 12Z",
@@ -780,7 +780,7 @@ impl IconShape for HiDatabase {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiPuzzle;
 impl IconShape for HiPuzzle {
     fn view_box(&self) -> String {
@@ -789,7 +789,7 @@ impl IconShape for HiPuzzle {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M10 3.5C10 2.67157 10.6716 2 11.5 2C12.3284 2 13 2.67157 13 3.5V4C13 4.55228 13.4477 5 14 5H17C17.5523 5 18 5.44772 18 6V9C18 9.55228 17.5523 10 17 10H16.5C15.6716 10 15 10.6716 15 11.5C15 12.3284 15.6716 13 16.5 13H17C17.5523 13 18 13.4477 18 14V17C18 17.5523 17.5523 18 17 18H14C13.4477 18 13 17.5523 13 17V16.5C13 15.6716 12.3284 15 11.5 15C10.6716 15 10 15.6716 10 16.5V17C10 17.5523 9.55228 18 9 18H6C5.44772 18 5 17.5523 5 17V14C5 13.4477 4.55228 13 4 13H3.5C2.67157 13 2 12.3284 2 11.5C2 10.6716 2.67157 10 3.5 10H4C4.55228 10 5 9.55228 5 9V6C5 5.44772 5.44772 5 6 5H9C9.55228 5 10 4.55228 10 4V3.5Z",
@@ -798,7 +798,7 @@ impl IconShape for HiPuzzle {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiDuplicate;
 impl IconShape for HiDuplicate {
     fn view_box(&self) -> String {
@@ -807,7 +807,7 @@ impl IconShape for HiDuplicate {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M7 9C7 7.89543 7.89543 7 9 7H15C16.1046 7 17 7.89543 17 9V15C17 16.1046 16.1046 17 15 17H9C7.89543 17 7 16.1046 7 15V9Z",
@@ -819,7 +819,7 @@ impl IconShape for HiDuplicate {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiFolderRemove;
 impl IconShape for HiFolderRemove {
     fn view_box(&self) -> String {
@@ -828,7 +828,7 @@ impl IconShape for HiFolderRemove {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M4 4C2.89543 4 2 4.89543 2 6V14C2 15.1046 2.89543 16 4 16H16C17.1046 16 18 15.1046 18 14V8C18 6.89543 17.1046 6 16 6H11L9 4H4ZM8 10C7.44772 10 7 10.4477 7 11C7 11.5523 7.44772 12 8 12H12C12.5523 12 13 11.5523 13 11C13 10.4477 12.5523 10 12 10H8Z",
@@ -838,7 +838,7 @@ impl IconShape for HiFolderRemove {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiTerminal;
 impl IconShape for HiTerminal {
     fn view_box(&self) -> String {
@@ -847,7 +847,7 @@ impl IconShape for HiTerminal {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -858,7 +858,7 @@ impl IconShape for HiTerminal {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiSparkles;
 impl IconShape for HiSparkles {
     fn view_box(&self) -> String {
@@ -867,7 +867,7 @@ impl IconShape for HiSparkles {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -883,7 +883,7 @@ impl IconShape for HiSparkles {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiChevronUp;
 impl IconShape for HiChevronUp {
     fn view_box(&self) -> String {
@@ -892,7 +892,7 @@ impl IconShape for HiChevronUp {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -903,7 +903,7 @@ impl IconShape for HiChevronUp {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiFolderOpen;
 impl IconShape for HiFolderOpen {
     fn view_box(&self) -> String {
@@ -912,7 +912,7 @@ impl IconShape for HiFolderOpen {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -926,7 +926,7 @@ impl IconShape for HiFolderOpen {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiDocumentAdd;
 impl IconShape for HiDocumentAdd {
     fn view_box(&self) -> String {
@@ -935,7 +935,7 @@ impl IconShape for HiDocumentAdd {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -946,7 +946,7 @@ impl IconShape for HiDocumentAdd {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiX;
 impl IconShape for HiX {
     fn view_box(&self) -> String {
@@ -955,7 +955,7 @@ impl IconShape for HiX {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -966,7 +966,7 @@ impl IconShape for HiX {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiAtSymbol;
 impl IconShape for HiAtSymbol {
     fn view_box(&self) -> String {
@@ -975,7 +975,7 @@ impl IconShape for HiAtSymbol {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -986,7 +986,7 @@ impl IconShape for HiAtSymbol {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiBookmarkAlt;
 impl IconShape for HiBookmarkAlt {
     fn view_box(&self) -> String {
@@ -995,7 +995,7 @@ impl IconShape for HiBookmarkAlt {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1006,7 +1006,7 @@ impl IconShape for HiBookmarkAlt {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCloudUpload;
 impl IconShape for HiCloudUpload {
     fn view_box(&self) -> String {
@@ -1015,7 +1015,7 @@ impl IconShape for HiCloudUpload {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M5.5 13C3.567 13 2 11.433 2 9.5C2 7.69163 3.37146 6.20358 5.13102 6.01922C5.04553 5.69382 5 5.35223 5 5C5 2.79086 6.79086 1 9 1C10.8788 1 12.4551 2.29538 12.8845 4.04175C13.0857 4.01422 13.2912 4 13.5 4C15.9853 4 18 6.01472 18 8.5C18 10.9853 15.9853 13 13.5 13H11V9.41421L12.2929 10.7071C12.6834 11.0976 13.3166 11.0976 13.7071 10.7071C14.0976 10.3166 14.0976 9.68342 13.7071 9.29289L10.7071 6.29289C10.3166 5.90237 9.68342 5.90237 9.29289 6.29289L6.29289 9.29289C5.90237 9.68342 5.90237 10.3166 6.29289 10.7071C6.68342 11.0976 7.31658 11.0976 7.70711 10.7071L9 9.41421L9 13H5.5Z",
@@ -1027,7 +1027,7 @@ impl IconShape for HiCloudUpload {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiFire;
 impl IconShape for HiFire {
     fn view_box(&self) -> String {
@@ -1036,7 +1036,7 @@ impl IconShape for HiFire {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1047,7 +1047,7 @@ impl IconShape for HiFire {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiBan;
 impl IconShape for HiBan {
     fn view_box(&self) -> String {
@@ -1056,7 +1056,7 @@ impl IconShape for HiBan {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1067,7 +1067,7 @@ impl IconShape for HiBan {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiShoppingBag;
 impl IconShape for HiShoppingBag {
     fn view_box(&self) -> String {
@@ -1076,7 +1076,7 @@ impl IconShape for HiShoppingBag {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1087,7 +1087,7 @@ impl IconShape for HiShoppingBag {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiChatAlt2;
 impl IconShape for HiChatAlt2 {
     fn view_box(&self) -> String {
@@ -1096,7 +1096,7 @@ impl IconShape for HiChatAlt2 {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M2 5C2 3.89543 2.89543 3 4 3H11C12.1046 3 13 3.89543 13 5V9C13 10.1046 12.1046 11 11 11H9L6 14V11H4C2.89543 11 2 10.1046 2 9V5Z",
@@ -1108,7 +1108,7 @@ impl IconShape for HiChatAlt2 {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiArrowSmUp;
 impl IconShape for HiArrowSmUp {
     fn view_box(&self) -> String {
@@ -1117,7 +1117,7 @@ impl IconShape for HiArrowSmUp {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1128,7 +1128,7 @@ impl IconShape for HiArrowSmUp {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiChevronRight;
 impl IconShape for HiChevronRight {
     fn view_box(&self) -> String {
@@ -1137,7 +1137,7 @@ impl IconShape for HiChevronRight {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1148,7 +1148,7 @@ impl IconShape for HiChevronRight {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiClipboard;
 impl IconShape for HiClipboard {
     fn view_box(&self) -> String {
@@ -1157,7 +1157,7 @@ impl IconShape for HiClipboard {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M8 3C8 2.44772 8.44772 2 9 2H11C11.5523 2 12 2.44772 12 3C12 3.55228 11.5523 4 11 4H9C8.44772 4 8 3.55228 8 3Z",
@@ -1169,7 +1169,7 @@ impl IconShape for HiClipboard {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiLink;
 impl IconShape for HiLink {
     fn view_box(&self) -> String {
@@ -1178,7 +1178,7 @@ impl IconShape for HiLink {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1189,7 +1189,7 @@ impl IconShape for HiLink {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiKey;
 impl IconShape for HiKey {
     fn view_box(&self) -> String {
@@ -1198,7 +1198,7 @@ impl IconShape for HiKey {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1209,7 +1209,7 @@ impl IconShape for HiKey {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiBeaker;
 impl IconShape for HiBeaker {
     fn view_box(&self) -> String {
@@ -1218,7 +1218,7 @@ impl IconShape for HiBeaker {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1229,7 +1229,7 @@ impl IconShape for HiBeaker {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiArrowRight;
 impl IconShape for HiArrowRight {
     fn view_box(&self) -> String {
@@ -1238,7 +1238,7 @@ impl IconShape for HiArrowRight {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1249,7 +1249,7 @@ impl IconShape for HiArrowRight {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiSelector;
 impl IconShape for HiSelector {
     fn view_box(&self) -> String {
@@ -1258,7 +1258,7 @@ impl IconShape for HiSelector {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1269,7 +1269,7 @@ impl IconShape for HiSelector {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiQrcode;
 impl IconShape for HiQrcode {
     fn view_box(&self) -> String {
@@ -1278,7 +1278,7 @@ impl IconShape for HiQrcode {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1320,7 +1320,7 @@ impl IconShape for HiQrcode {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCurrencyRupee;
 impl IconShape for HiCurrencyRupee {
     fn view_box(&self) -> String {
@@ -1329,7 +1329,7 @@ impl IconShape for HiCurrencyRupee {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1340,7 +1340,7 @@ impl IconShape for HiCurrencyRupee {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiMenuAlt4;
 impl IconShape for HiMenuAlt4 {
     fn view_box(&self) -> String {
@@ -1349,7 +1349,7 @@ impl IconShape for HiMenuAlt4 {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1365,7 +1365,7 @@ impl IconShape for HiMenuAlt4 {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiPaperClip;
 impl IconShape for HiPaperClip {
     fn view_box(&self) -> String {
@@ -1374,7 +1374,7 @@ impl IconShape for HiPaperClip {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1385,7 +1385,7 @@ impl IconShape for HiPaperClip {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiArchive;
 impl IconShape for HiArchive {
     fn view_box(&self) -> String {
@@ -1394,7 +1394,7 @@ impl IconShape for HiArchive {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M4 3C2.89543 3 2 3.89543 2 5C2 6.10457 2.89543 7 4 7H16C17.1046 7 18 6.10457 18 5C18 3.89543 17.1046 3 16 3H4Z",
@@ -1408,7 +1408,7 @@ impl IconShape for HiArchive {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiPhoneOutgoing;
 impl IconShape for HiPhoneOutgoing {
     fn view_box(&self) -> String {
@@ -1417,7 +1417,7 @@ impl IconShape for HiPhoneOutgoing {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M17.9241 2.61722C17.8757 2.50014 17.804 2.3904 17.7092 2.29502C17.7078 2.2936 17.7064 2.29219 17.705 2.29078C17.5242 2.11106 17.2751 2 17 2H13C12.4477 2 12 2.44772 12 3C12 3.55228 12.4477 4 13 4H14.5858L11.2929 7.29289C10.9024 7.68342 10.9024 8.31658 11.2929 8.70711C11.6834 9.09763 12.3166 9.09763 12.7071 8.70711L16 5.41421V7C16 7.55228 16.4477 8 17 8C17.5523 8 18 7.55228 18 7V3C18 2.86441 17.973 2.73512 17.9241 2.61722Z",
@@ -1429,7 +1429,7 @@ impl IconShape for HiPhoneOutgoing {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiMail;
 impl IconShape for HiMail {
     fn view_box(&self) -> String {
@@ -1438,7 +1438,7 @@ impl IconShape for HiMail {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M2.00333 5.88355L9.99995 9.88186L17.9967 5.8835C17.9363 4.83315 17.0655 4 16 4H4C2.93452 4 2.06363 4.83318 2.00333 5.88355Z",
@@ -1450,7 +1450,7 @@ impl IconShape for HiMail {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCurrencyBangladeshi;
 impl IconShape for HiCurrencyBangladeshi {
     fn view_box(&self) -> String {
@@ -1459,7 +1459,7 @@ impl IconShape for HiCurrencyBangladeshi {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1470,7 +1470,7 @@ impl IconShape for HiCurrencyBangladeshi {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiDownload;
 impl IconShape for HiDownload {
     fn view_box(&self) -> String {
@@ -1479,7 +1479,7 @@ impl IconShape for HiDownload {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1490,7 +1490,7 @@ impl IconShape for HiDownload {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiChatAlt;
 impl IconShape for HiChatAlt {
     fn view_box(&self) -> String {
@@ -1499,7 +1499,7 @@ impl IconShape for HiChatAlt {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1510,7 +1510,7 @@ impl IconShape for HiChatAlt {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiBookOpen;
 impl IconShape for HiBookOpen {
     fn view_box(&self) -> String {
@@ -1519,7 +1519,7 @@ impl IconShape for HiBookOpen {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M9 4.80423C7.9428 4.28906 6.75516 4 5.5 4C4.24484 4 3.0572 4.28906 2 4.80423V14.8042C3.0572 14.2891 4.24484 14 5.5 14C7.1686 14 8.71789 14.5108 10 15.3847C11.2821 14.5108 12.8314 14 14.5 14C15.7552 14 16.9428 14.2891 18 14.8042V4.80423C16.9428 4.28906 15.7552 4 14.5 4C13.2448 4 12.0572 4.28906 11 4.80423V12C11 12.5523 10.5523 13 10 13C9.44772 13 9 12.5523 9 12V4.80423Z",
@@ -1528,7 +1528,7 @@ impl IconShape for HiBookOpen {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiLocationMarker;
 impl IconShape for HiLocationMarker {
     fn view_box(&self) -> String {
@@ -1537,7 +1537,7 @@ impl IconShape for HiLocationMarker {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1548,7 +1548,7 @@ impl IconShape for HiLocationMarker {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiArrowSmDown;
 impl IconShape for HiArrowSmDown {
     fn view_box(&self) -> String {
@@ -1557,7 +1557,7 @@ impl IconShape for HiArrowSmDown {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1568,7 +1568,7 @@ impl IconShape for HiArrowSmDown {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiServer;
 impl IconShape for HiServer {
     fn view_box(&self) -> String {
@@ -1577,7 +1577,7 @@ impl IconShape for HiServer {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1593,7 +1593,7 @@ impl IconShape for HiServer {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiPlusSm;
 impl IconShape for HiPlusSm {
     fn view_box(&self) -> String {
@@ -1602,7 +1602,7 @@ impl IconShape for HiPlusSm {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1613,7 +1613,7 @@ impl IconShape for HiPlusSm {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiInboxIn;
 impl IconShape for HiInboxIn {
     fn view_box(&self) -> String {
@@ -1622,7 +1622,7 @@ impl IconShape for HiInboxIn {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M8.70711 7.29289C8.31658 6.90237 7.68342 6.90237 7.29289 7.29289C6.90237 7.68342 6.90237 8.31658 7.29289 8.70711L9.29289 10.7071C9.48043 10.8946 9.73478 11 10 11C10.2652 11 10.5196 10.8946 10.7071 10.7071L12.7071 8.70711C13.0976 8.31658 13.0976 7.68342 12.7071 7.29289C12.3166 6.90237 11.6834 6.90237 11.2929 7.29289L11 7.58579L11 3C11 2.44771 10.5523 2 10 2C9.44771 2 9 2.44772 9 3V7.58579L8.70711 7.29289Z",
@@ -1634,7 +1634,7 @@ impl IconShape for HiInboxIn {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiArrowNarrowLeft;
 impl IconShape for HiArrowNarrowLeft {
     fn view_box(&self) -> String {
@@ -1643,7 +1643,7 @@ impl IconShape for HiArrowNarrowLeft {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1654,7 +1654,7 @@ impl IconShape for HiArrowNarrowLeft {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiLogin;
 impl IconShape for HiLogin {
     fn view_box(&self) -> String {
@@ -1663,7 +1663,7 @@ impl IconShape for HiLogin {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1674,7 +1674,7 @@ impl IconShape for HiLogin {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiVariable;
 impl IconShape for HiVariable {
     fn view_box(&self) -> String {
@@ -1683,7 +1683,7 @@ impl IconShape for HiVariable {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1694,7 +1694,7 @@ impl IconShape for HiVariable {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiMenuAlt1;
 impl IconShape for HiMenuAlt1 {
     fn view_box(&self) -> String {
@@ -1703,7 +1703,7 @@ impl IconShape for HiMenuAlt1 {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1724,7 +1724,7 @@ impl IconShape for HiMenuAlt1 {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiBell;
 impl IconShape for HiBell {
     fn view_box(&self) -> String {
@@ -1733,7 +1733,7 @@ impl IconShape for HiBell {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M10 2C6.68632 2 4.00003 4.68629 4.00003 8V11.5858L3.29292 12.2929C3.00692 12.5789 2.92137 13.009 3.07615 13.3827C3.23093 13.7564 3.59557 14 4.00003 14H16C16.4045 14 16.7691 13.7564 16.9239 13.3827C17.0787 13.009 16.9931 12.5789 16.7071 12.2929L16 11.5858V8C16 4.68629 13.3137 2 10 2Z",
@@ -1745,7 +1745,7 @@ impl IconShape for HiBell {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCode;
 impl IconShape for HiCode {
     fn view_box(&self) -> String {
@@ -1754,7 +1754,7 @@ impl IconShape for HiCode {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1765,7 +1765,7 @@ impl IconShape for HiCode {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCake;
 impl IconShape for HiCake {
     fn view_box(&self) -> String {
@@ -1774,7 +1774,7 @@ impl IconShape for HiCake {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1785,7 +1785,7 @@ impl IconShape for HiCake {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiArrowNarrowUp;
 impl IconShape for HiArrowNarrowUp {
     fn view_box(&self) -> String {
@@ -1794,7 +1794,7 @@ impl IconShape for HiArrowNarrowUp {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1805,7 +1805,7 @@ impl IconShape for HiArrowNarrowUp {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiFlag;
 impl IconShape for HiFlag {
     fn view_box(&self) -> String {
@@ -1814,7 +1814,7 @@ impl IconShape for HiFlag {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1825,7 +1825,7 @@ impl IconShape for HiFlag {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiEyeOff;
 impl IconShape for HiEyeOff {
     fn view_box(&self) -> String {
@@ -1834,7 +1834,7 @@ impl IconShape for HiEyeOff {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1848,7 +1848,7 @@ impl IconShape for HiEyeOff {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiStop;
 impl IconShape for HiStop {
     fn view_box(&self) -> String {
@@ -1857,7 +1857,7 @@ impl IconShape for HiStop {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1868,7 +1868,7 @@ impl IconShape for HiStop {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiArrowCircleLeft;
 impl IconShape for HiArrowCircleLeft {
     fn view_box(&self) -> String {
@@ -1877,7 +1877,7 @@ impl IconShape for HiArrowCircleLeft {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1888,7 +1888,7 @@ impl IconShape for HiArrowCircleLeft {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiNewspaper;
 impl IconShape for HiNewspaper {
     fn view_box(&self) -> String {
@@ -1897,7 +1897,7 @@ impl IconShape for HiNewspaper {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1911,7 +1911,7 @@ impl IconShape for HiNewspaper {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCube;
 impl IconShape for HiCube {
     fn view_box(&self) -> String {
@@ -1920,7 +1920,7 @@ impl IconShape for HiCube {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M11 17C11 17.3466 11.1795 17.6684 11.4743 17.8507C11.7691 18.0329 12.1372 18.0494 12.4472 17.8944L16.4472 15.8944C16.786 15.725 17 15.3788 17 15V9.23607C17 8.88949 16.8205 8.56762 16.5257 8.38542C16.2309 8.20321 15.8628 8.18665 15.5528 8.34164L11.5528 10.3416C11.214 10.511 11 10.8573 11 11.2361V17Z",
@@ -1935,7 +1935,7 @@ impl IconShape for HiCube {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiEmojiHappy;
 impl IconShape for HiEmojiHappy {
     fn view_box(&self) -> String {
@@ -1944,7 +1944,7 @@ impl IconShape for HiEmojiHappy {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1955,7 +1955,7 @@ impl IconShape for HiEmojiHappy {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiMinusSm;
 impl IconShape for HiMinusSm {
     fn view_box(&self) -> String {
@@ -1964,7 +1964,7 @@ impl IconShape for HiMinusSm {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1975,7 +1975,7 @@ impl IconShape for HiMinusSm {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiDotsCircleHorizontal;
 impl IconShape for HiDotsCircleHorizontal {
     fn view_box(&self) -> String {
@@ -1984,7 +1984,7 @@ impl IconShape for HiDotsCircleHorizontal {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -1995,7 +1995,7 @@ impl IconShape for HiDotsCircleHorizontal {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiSupport;
 impl IconShape for HiSupport {
     fn view_box(&self) -> String {
@@ -2004,7 +2004,7 @@ impl IconShape for HiSupport {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2015,7 +2015,7 @@ impl IconShape for HiSupport {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiClipboardList;
 impl IconShape for HiClipboardList {
     fn view_box(&self) -> String {
@@ -2024,7 +2024,7 @@ impl IconShape for HiClipboardList {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M9 2C8.44772 2 8 2.44772 8 3C8 3.55228 8.44772 4 9 4H11C11.5523 4 12 3.55228 12 3C12 2.44772 11.5523 2 11 2H9Z",
@@ -2038,7 +2038,7 @@ impl IconShape for HiClipboardList {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiUserRemove;
 impl IconShape for HiUserRemove {
     fn view_box(&self) -> String {
@@ -2047,7 +2047,7 @@ impl IconShape for HiUserRemove {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M11 6C11 7.65685 9.65685 9 8 9C6.34315 9 5 7.65685 5 6C5 4.34315 6.34315 3 8 3C9.65685 3 11 4.34315 11 6Z",
@@ -2062,7 +2062,7 @@ impl IconShape for HiUserRemove {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiPlus;
 impl IconShape for HiPlus {
     fn view_box(&self) -> String {
@@ -2071,7 +2071,7 @@ impl IconShape for HiPlus {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2082,7 +2082,7 @@ impl IconShape for HiPlus {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiDocument;
 impl IconShape for HiDocument {
     fn view_box(&self) -> String {
@@ -2091,7 +2091,7 @@ impl IconShape for HiDocument {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2102,7 +2102,7 @@ impl IconShape for HiDocument {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiMusicNote;
 impl IconShape for HiMusicNote {
     fn view_box(&self) -> String {
@@ -2111,7 +2111,7 @@ impl IconShape for HiMusicNote {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M18 3.00001C18 2.70042 17.8657 2.41661 17.634 2.22667C17.4023 2.03673 17.0977 1.96067 16.8039 2.01943L6.80388 4.01943C6.33646 4.11291 6 4.52333 6 5.00001V14.1138C5.68722 14.0401 5.35064 14 5 14C3.34315 14 2 14.8954 2 16C2 17.1046 3.34315 18 5 18C6.65685 18 7.99999 17.1046 8 16V7.81981L16 6.21981V12.1138C15.6872 12.0401 15.3506 12 15 12C13.3431 12 12 12.8954 12 14C12 15.1046 13.3431 16 15 16C16.6569 16 18 15.1046 18 14V3.00001Z",
@@ -2120,7 +2120,7 @@ impl IconShape for HiMusicNote {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCheck;
 impl IconShape for HiCheck {
     fn view_box(&self) -> String {
@@ -2129,7 +2129,7 @@ impl IconShape for HiCheck {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2140,7 +2140,7 @@ impl IconShape for HiCheck {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiMenuAlt2;
 impl IconShape for HiMenuAlt2 {
     fn view_box(&self) -> String {
@@ -2149,7 +2149,7 @@ impl IconShape for HiMenuAlt2 {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2170,7 +2170,7 @@ impl IconShape for HiMenuAlt2 {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiViewBoards;
 impl IconShape for HiViewBoards {
     fn view_box(&self) -> String {
@@ -2179,7 +2179,7 @@ impl IconShape for HiViewBoards {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M2 4C2 3.44772 2.44772 3 3 3H5C5.55228 3 6 3.44772 6 4V16C6 16.5523 5.55228 17 5 17H3C2.44772 17 2 16.5523 2 16V4Z",
@@ -2194,7 +2194,7 @@ impl IconShape for HiViewBoards {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiRss;
 impl IconShape for HiRss {
     fn view_box(&self) -> String {
@@ -2203,7 +2203,7 @@ impl IconShape for HiRss {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M5 3C4.44772 3 4 3.44772 4 4C4 4.55228 4.44772 5 5 5C10.5228 5 15 9.47715 15 15C15 15.5523 15.4477 16 16 16C16.5523 16 17 15.5523 17 15C17 8.37258 11.6274 3 5 3Z",
@@ -2218,7 +2218,7 @@ impl IconShape for HiRss {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiWifi;
 impl IconShape for HiWifi {
     fn view_box(&self) -> String {
@@ -2227,7 +2227,7 @@ impl IconShape for HiWifi {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2238,7 +2238,7 @@ impl IconShape for HiWifi {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiMenuAlt3;
 impl IconShape for HiMenuAlt3 {
     fn view_box(&self) -> String {
@@ -2247,7 +2247,7 @@ impl IconShape for HiMenuAlt3 {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2268,7 +2268,7 @@ impl IconShape for HiMenuAlt3 {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiScale;
 impl IconShape for HiScale {
     fn view_box(&self) -> String {
@@ -2277,7 +2277,7 @@ impl IconShape for HiScale {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2288,7 +2288,7 @@ impl IconShape for HiScale {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiArrowCircleRight;
 impl IconShape for HiArrowCircleRight {
     fn view_box(&self) -> String {
@@ -2297,7 +2297,7 @@ impl IconShape for HiArrowCircleRight {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2308,7 +2308,7 @@ impl IconShape for HiArrowCircleRight {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiUserAdd;
 impl IconShape for HiUserAdd {
     fn view_box(&self) -> String {
@@ -2317,7 +2317,7 @@ impl IconShape for HiUserAdd {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M8 9C9.65685 9 11 7.65685 11 6C11 4.34315 9.65685 3 8 3C6.34315 3 5 4.34315 5 6C5 7.65685 6.34315 9 8 9Z",
@@ -2332,7 +2332,7 @@ impl IconShape for HiUserAdd {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiArrowSmLeft;
 impl IconShape for HiArrowSmLeft {
     fn view_box(&self) -> String {
@@ -2341,7 +2341,7 @@ impl IconShape for HiArrowSmLeft {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2352,7 +2352,7 @@ impl IconShape for HiArrowSmLeft {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiZoomIn;
 impl IconShape for HiZoomIn {
     fn view_box(&self) -> String {
@@ -2361,7 +2361,7 @@ impl IconShape for HiZoomIn {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M5 8C5 7.44772 5.44772 7 6 7H7V6C7 5.44772 7.44772 5 8 5C8.55228 5 9 5.44772 9 6V7H10C10.5523 7 11 7.44772 11 8C11 8.55228 10.5523 9 10 9H9V10C9 10.5523 8.55228 11 8 11C7.44771 11 7 10.5523 7 10V9H6C5.44772 9 5 8.55228 5 8Z",
@@ -2375,7 +2375,7 @@ impl IconShape for HiZoomIn {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiArrowSmRight;
 impl IconShape for HiArrowSmRight {
     fn view_box(&self) -> String {
@@ -2384,7 +2384,7 @@ impl IconShape for HiArrowSmRight {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2395,7 +2395,7 @@ impl IconShape for HiArrowSmRight {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCubeTransparent;
 impl IconShape for HiCubeTransparent {
     fn view_box(&self) -> String {
@@ -2404,7 +2404,7 @@ impl IconShape for HiCubeTransparent {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2415,7 +2415,7 @@ impl IconShape for HiCubeTransparent {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiRefresh;
 impl IconShape for HiRefresh {
     fn view_box(&self) -> String {
@@ -2424,7 +2424,7 @@ impl IconShape for HiRefresh {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2435,7 +2435,7 @@ impl IconShape for HiRefresh {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCheckCircle;
 impl IconShape for HiCheckCircle {
     fn view_box(&self) -> String {
@@ -2444,7 +2444,7 @@ impl IconShape for HiCheckCircle {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2455,7 +2455,7 @@ impl IconShape for HiCheckCircle {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiThumbDown;
 impl IconShape for HiThumbDown {
     fn view_box(&self) -> String {
@@ -2464,7 +2464,7 @@ impl IconShape for HiThumbDown {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M18 9.5C18 10.3284 17.3285 11 16.5 11C15.6716 11 15 10.3284 15 9.5V3.5C15 2.67157 15.6716 2 16.5 2C17.3285 2 18 2.67157 18 3.5V9.5Z",
@@ -2476,7 +2476,7 @@ impl IconShape for HiThumbDown {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiDeviceTablet;
 impl IconShape for HiDeviceTablet {
     fn view_box(&self) -> String {
@@ -2485,7 +2485,7 @@ impl IconShape for HiDeviceTablet {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2496,7 +2496,7 @@ impl IconShape for HiDeviceTablet {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiSave;
 impl IconShape for HiSave {
     fn view_box(&self) -> String {
@@ -2505,7 +2505,7 @@ impl IconShape for HiSave {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M7.70711 10.2929C7.31658 9.90237 6.68342 9.90237 6.29289 10.2929C5.90237 10.6834 5.90237 11.3166 6.29289 11.7071L9.29289 14.7071C9.68342 15.0976 10.3166 15.0976 10.7071 14.7071L13.7071 11.7071C14.0976 11.3166 14.0976 10.6834 13.7071 10.2929C13.3166 9.90237 12.6834 9.90237 12.2929 10.2929L11 11.5858L11 6H16C17.1046 6 18 6.89543 18 8V15C18 16.1046 17.1046 17 16 17H4C2.89543 17 2 16.1046 2 15V8C2 6.89543 2.89543 6 4 6H9L9 11.5858L7.70711 10.2929Z",
@@ -2517,7 +2517,7 @@ impl IconShape for HiSave {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiStatusOnline;
 impl IconShape for HiStatusOnline {
     fn view_box(&self) -> String {
@@ -2526,7 +2526,7 @@ impl IconShape for HiStatusOnline {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2537,7 +2537,7 @@ impl IconShape for HiStatusOnline {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiPaperAirplane;
 impl IconShape for HiPaperAirplane {
     fn view_box(&self) -> String {
@@ -2546,7 +2546,7 @@ impl IconShape for HiPaperAirplane {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M10.8944 2.55279C10.725 2.214 10.3788 2 10 2C9.62124 2 9.27498 2.214 9.10558 2.55279L2.10558 16.5528C1.92823 16.9075 1.97724 17.3335 2.2305 17.6386C2.48376 17.9438 2.89342 18.0705 3.27473 17.9615L8.27472 16.533C8.70402 16.4103 9 16.0179 9 15.5714V11C9 10.4477 9.44772 10 10 10C10.5523 10 11 10.4477 11 11V15.5714C11 16.0179 11.296 16.4103 11.7253 16.533L16.7253 17.9615C17.1066 18.0705 17.5163 17.9438 17.7695 17.6386C18.0228 17.3335 18.0718 16.9075 17.8944 16.5528L10.8944 2.55279Z",
@@ -2555,7 +2555,7 @@ impl IconShape for HiPaperAirplane {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiShieldExclamation;
 impl IconShape for HiShieldExclamation {
     fn view_box(&self) -> String {
@@ -2564,7 +2564,7 @@ impl IconShape for HiShieldExclamation {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2575,7 +2575,7 @@ impl IconShape for HiShieldExclamation {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiFastForward;
 impl IconShape for HiFastForward {
     fn view_box(&self) -> String {
@@ -2584,7 +2584,7 @@ impl IconShape for HiFastForward {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M4.5547 5.16795C4.24784 4.96338 3.8533 4.94431 3.52814 5.11833C3.20298 5.29235 3 5.63121 3 6V14C3 14.3688 3.20298 14.7077 3.52814 14.8817C3.8533 15.0557 4.24784 15.0366 4.5547 14.8321L10 11.2019V14C10 14.3688 10.203 14.7077 10.5281 14.8817C10.8533 15.0557 11.2478 15.0366 11.5547 14.8321L17.5547 10.8321C17.8329 10.6466 18 10.3344 18 10C18 9.66565 17.8329 9.35342 17.5547 9.16795L11.5547 5.16795C11.2478 4.96338 10.8533 4.94431 10.5281 5.11833C10.203 5.29235 10 5.63121 10 6V8.79815L4.5547 5.16795Z",
@@ -2593,7 +2593,7 @@ impl IconShape for HiFastForward {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCurrencyYen;
 impl IconShape for HiCurrencyYen {
     fn view_box(&self) -> String {
@@ -2602,7 +2602,7 @@ impl IconShape for HiCurrencyYen {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2613,7 +2613,7 @@ impl IconShape for HiCurrencyYen {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiZoomOut;
 impl IconShape for HiZoomOut {
     fn view_box(&self) -> String {
@@ -2622,7 +2622,7 @@ impl IconShape for HiZoomOut {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2638,7 +2638,7 @@ impl IconShape for HiZoomOut {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiPlay;
 impl IconShape for HiPlay {
     fn view_box(&self) -> String {
@@ -2647,7 +2647,7 @@ impl IconShape for HiPlay {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2658,7 +2658,7 @@ impl IconShape for HiPlay {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiChat;
 impl IconShape for HiChat {
     fn view_box(&self) -> String {
@@ -2667,7 +2667,7 @@ impl IconShape for HiChat {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2678,7 +2678,7 @@ impl IconShape for HiChat {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiPencilAlt;
 impl IconShape for HiPencilAlt {
     fn view_box(&self) -> String {
@@ -2687,7 +2687,7 @@ impl IconShape for HiPencilAlt {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M17.4142 2.58579C16.6332 1.80474 15.3668 1.80474 14.5858 2.58579L7 10.1716V13H9.82842L17.4142 5.41421C18.1953 4.63316 18.1953 3.36683 17.4142 2.58579Z",
@@ -2701,7 +2701,7 @@ impl IconShape for HiPencilAlt {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCursorClick;
 impl IconShape for HiCursorClick {
     fn view_box(&self) -> String {
@@ -2710,7 +2710,7 @@ impl IconShape for HiCursorClick {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2721,7 +2721,7 @@ impl IconShape for HiCursorClick {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiTable;
 impl IconShape for HiTable {
     fn view_box(&self) -> String {
@@ -2730,7 +2730,7 @@ impl IconShape for HiTable {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2741,7 +2741,7 @@ impl IconShape for HiTable {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiBadgeCheck;
 impl IconShape for HiBadgeCheck {
     fn view_box(&self) -> String {
@@ -2750,7 +2750,7 @@ impl IconShape for HiBadgeCheck {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2761,7 +2761,7 @@ impl IconShape for HiBadgeCheck {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiDocumentText;
 impl IconShape for HiDocumentText {
     fn view_box(&self) -> String {
@@ -2770,7 +2770,7 @@ impl IconShape for HiDocumentText {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2781,7 +2781,7 @@ impl IconShape for HiDocumentText {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCamera;
 impl IconShape for HiCamera {
     fn view_box(&self) -> String {
@@ -2790,7 +2790,7 @@ impl IconShape for HiCamera {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2801,7 +2801,7 @@ impl IconShape for HiCamera {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiPrinter;
 impl IconShape for HiPrinter {
     fn view_box(&self) -> String {
@@ -2810,7 +2810,7 @@ impl IconShape for HiPrinter {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2821,7 +2821,7 @@ impl IconShape for HiPrinter {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiTruck;
 impl IconShape for HiTruck {
     fn view_box(&self) -> String {
@@ -2830,7 +2830,7 @@ impl IconShape for HiTruck {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M8 16.5C8 17.3284 7.32843 18 6.5 18C5.67157 18 5 17.3284 5 16.5C5 15.6716 5.67157 15 6.5 15C7.32843 15 8 15.6716 8 16.5Z",
@@ -2848,7 +2848,7 @@ impl IconShape for HiTruck {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiIdentification;
 impl IconShape for HiIdentification {
     fn view_box(&self) -> String {
@@ -2857,7 +2857,7 @@ impl IconShape for HiIdentification {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2868,7 +2868,7 @@ impl IconShape for HiIdentification {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiDeviceMobile;
 impl IconShape for HiDeviceMobile {
     fn view_box(&self) -> String {
@@ -2877,7 +2877,7 @@ impl IconShape for HiDeviceMobile {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2888,7 +2888,7 @@ impl IconShape for HiDeviceMobile {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiDocumentReport;
 impl IconShape for HiDocumentReport {
     fn view_box(&self) -> String {
@@ -2897,7 +2897,7 @@ impl IconShape for HiDocumentReport {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2908,7 +2908,7 @@ impl IconShape for HiDocumentReport {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiDocumentDownload;
 impl IconShape for HiDocumentDownload {
     fn view_box(&self) -> String {
@@ -2917,7 +2917,7 @@ impl IconShape for HiDocumentDownload {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2928,7 +2928,7 @@ impl IconShape for HiDocumentDownload {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiEmojiSad;
 impl IconShape for HiEmojiSad {
     fn view_box(&self) -> String {
@@ -2937,7 +2937,7 @@ impl IconShape for HiEmojiSad {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2948,7 +2948,7 @@ impl IconShape for HiEmojiSad {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiExclamationCircle;
 impl IconShape for HiExclamationCircle {
     fn view_box(&self) -> String {
@@ -2957,7 +2957,7 @@ impl IconShape for HiExclamationCircle {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2968,7 +2968,7 @@ impl IconShape for HiExclamationCircle {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCurrencyEuro;
 impl IconShape for HiCurrencyEuro {
     fn view_box(&self) -> String {
@@ -2977,7 +2977,7 @@ impl IconShape for HiCurrencyEuro {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -2988,7 +2988,7 @@ impl IconShape for HiCurrencyEuro {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiArrowsExpand;
 impl IconShape for HiArrowsExpand {
     fn view_box(&self) -> String {
@@ -2997,7 +2997,7 @@ impl IconShape for HiArrowsExpand {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3008,7 +3008,7 @@ impl IconShape for HiArrowsExpand {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiTrash;
 impl IconShape for HiTrash {
     fn view_box(&self) -> String {
@@ -3017,7 +3017,7 @@ impl IconShape for HiTrash {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3028,7 +3028,7 @@ impl IconShape for HiTrash {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiChartBar;
 impl IconShape for HiChartBar {
     fn view_box(&self) -> String {
@@ -3037,7 +3037,7 @@ impl IconShape for HiChartBar {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M2 11C2 10.4477 2.44772 10 3 10H5C5.55228 10 6 10.4477 6 11V16C6 16.5523 5.55228 17 5 17H3C2.44772 17 2 16.5523 2 16V11Z",
@@ -3052,7 +3052,7 @@ impl IconShape for HiChartBar {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiViewGridAdd;
 impl IconShape for HiViewGridAdd {
     fn view_box(&self) -> String {
@@ -3061,7 +3061,7 @@ impl IconShape for HiViewGridAdd {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M5 3C3.89543 3 3 3.89543 3 5V7C3 8.10457 3.89543 9 5 9H7C8.10457 9 9 8.10457 9 7V5C9 3.89543 8.10457 3 7 3H5Z",
@@ -3079,7 +3079,7 @@ impl IconShape for HiViewGridAdd {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiSwitchHorizontal;
 impl IconShape for HiSwitchHorizontal {
     fn view_box(&self) -> String {
@@ -3088,7 +3088,7 @@ impl IconShape for HiSwitchHorizontal {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M8 5C7.44772 5 7 5.44771 7 6C7 6.55228 7.44772 7 8 7L13.5858 7L12.2929 8.29289C11.9024 8.68342 11.9024 9.31658 12.2929 9.70711C12.6834 10.0976 13.3166 10.0976 13.7071 9.70711L16.7071 6.70711C16.8946 6.51957 17 6.26522 17 6C17 5.73478 16.8946 5.48043 16.7071 5.29289L13.7071 2.29289C13.3166 1.90237 12.6834 1.90237 12.2929 2.29289C11.9024 2.68342 11.9024 3.31658 12.2929 3.70711L13.5858 5L8 5Z",
@@ -3100,7 +3100,7 @@ impl IconShape for HiSwitchHorizontal {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiVolumeUp;
 impl IconShape for HiVolumeUp {
     fn view_box(&self) -> String {
@@ -3109,7 +3109,7 @@ impl IconShape for HiVolumeUp {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3125,7 +3125,7 @@ impl IconShape for HiVolumeUp {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiHashtag;
 impl IconShape for HiHashtag {
     fn view_box(&self) -> String {
@@ -3134,7 +3134,7 @@ impl IconShape for HiHashtag {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3145,7 +3145,7 @@ impl IconShape for HiHashtag {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiPresentationChartLine;
 impl IconShape for HiPresentationChartLine {
     fn view_box(&self) -> String {
@@ -3154,7 +3154,7 @@ impl IconShape for HiPresentationChartLine {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3165,7 +3165,7 @@ impl IconShape for HiPresentationChartLine {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiTemplate;
 impl IconShape for HiTemplate {
     fn view_box(&self) -> String {
@@ -3174,7 +3174,7 @@ impl IconShape for HiTemplate {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M3 4C3 3.44772 3.44772 3 4 3H16C16.5523 3 17 3.44772 17 4V6C17 6.55228 16.5523 7 16 7H4C3.44772 7 3 6.55228 3 6V4Z",
@@ -3189,7 +3189,7 @@ impl IconShape for HiTemplate {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiStar;
 impl IconShape for HiStar {
     fn view_box(&self) -> String {
@@ -3198,7 +3198,7 @@ impl IconShape for HiStar {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M9.04893 2.92707C9.34828 2.00576 10.6517 2.00576 10.951 2.92707L12.0206 6.21886C12.1545 6.63089 12.5384 6.90985 12.9717 6.90985H16.4329C17.4016 6.90985 17.8044 8.14946 17.0207 8.71886L14.2205 10.7533C13.87 11.0079 13.7233 11.4593 13.8572 11.8713L14.9268 15.1631C15.2261 16.0844 14.1717 16.8506 13.3879 16.2812L10.5878 14.2467C10.2373 13.9921 9.76269 13.9921 9.4122 14.2467L6.61203 16.2812C5.82832 16.8506 4.77384 16.0844 5.07319 15.1631L6.14276 11.8713C6.27663 11.4593 6.12997 11.0079 5.77949 10.7533L2.97932 8.71886C2.1956 8.14946 2.59838 6.90985 3.5671 6.90985H7.0283C7.46153 6.90985 7.84548 6.63089 7.97936 6.21886L9.04893 2.92707Z",
@@ -3207,7 +3207,7 @@ impl IconShape for HiStar {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiSun;
 impl IconShape for HiSun {
     fn view_box(&self) -> String {
@@ -3216,7 +3216,7 @@ impl IconShape for HiSun {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3227,7 +3227,7 @@ impl IconShape for HiSun {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiReceiptRefund;
 impl IconShape for HiReceiptRefund {
     fn view_box(&self) -> String {
@@ -3236,7 +3236,7 @@ impl IconShape for HiReceiptRefund {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3247,7 +3247,7 @@ impl IconShape for HiReceiptRefund {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiArrowCircleDown;
 impl IconShape for HiArrowCircleDown {
     fn view_box(&self) -> String {
@@ -3256,7 +3256,7 @@ impl IconShape for HiArrowCircleDown {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3267,7 +3267,7 @@ impl IconShape for HiArrowCircleDown {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiFolderDownload;
 impl IconShape for HiFolderDownload {
     fn view_box(&self) -> String {
@@ -3276,7 +3276,7 @@ impl IconShape for HiFolderDownload {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M4 4C2.89543 4 2 4.89543 2 6V14C2 15.1046 2.89543 16 4 16H16C17.1046 16 18 15.1046 18 14V8C18 6.89543 17.1046 6 16 6H11L9 4H4ZM11 9C11 8.44771 10.5523 8 10 8C9.44772 8 9 8.44771 9 9V10.5858L8.70711 10.2929C8.31658 9.90237 7.68342 9.90237 7.29289 10.2929C6.90237 10.6834 6.90237 11.3166 7.29289 11.7071L9.2926 13.7068L9.29289 13.7071L9.29502 13.7092C9.3904 13.804 9.50014 13.8757 9.61722 13.9241C9.73512 13.973 9.86441 14 10 14C10.1356 14 10.2649 13.973 10.3828 13.9241C10.4999 13.8757 10.6096 13.804 10.705 13.7092L10.7071 13.7071L10.7074 13.7068L12.7071 11.7071C13.0976 11.3166 13.0976 10.6834 12.7071 10.2929C12.3166 9.90237 11.6834 9.90237 11.2929 10.2929L11 10.5858V9Z",
@@ -3286,7 +3286,7 @@ impl IconShape for HiFolderDownload {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiChartPie;
 impl IconShape for HiChartPie {
     fn view_box(&self) -> String {
@@ -3295,7 +3295,7 @@ impl IconShape for HiChartPie {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M2 10C2 5.58172 5.58172 2 10 2V10H18C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10Z",
@@ -3307,7 +3307,7 @@ impl IconShape for HiChartPie {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCash;
 impl IconShape for HiCash {
     fn view_box(&self) -> String {
@@ -3316,7 +3316,7 @@ impl IconShape for HiCash {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3327,7 +3327,7 @@ impl IconShape for HiCash {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiMailOpen;
 impl IconShape for HiMailOpen {
     fn view_box(&self) -> String {
@@ -3336,7 +3336,7 @@ impl IconShape for HiMailOpen {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3347,7 +3347,7 @@ impl IconShape for HiMailOpen {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCollection;
 impl IconShape for HiCollection {
     fn view_box(&self) -> String {
@@ -3356,7 +3356,7 @@ impl IconShape for HiCollection {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M7 3C6.44772 3 6 3.44772 6 4C6 4.55228 6.44772 5 7 5H13C13.5523 5 14 4.55228 14 4C14 3.44772 13.5523 3 13 3H7Z",
@@ -3371,7 +3371,7 @@ impl IconShape for HiCollection {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiSearchCircle;
 impl IconShape for HiSearchCircle {
     fn view_box(&self) -> String {
@@ -3380,7 +3380,7 @@ impl IconShape for HiSearchCircle {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M9 9C9 7.89543 9.89543 7 11 7C12.1046 7 13 7.89543 13 9C13 10.1046 12.1046 11 11 11C10.4474 11 9.94881 10.7772 9.58579 10.4142C9.22276 10.0512 9 9.55256 9 9Z",
@@ -3394,7 +3394,7 @@ impl IconShape for HiSearchCircle {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiPlusCircle;
 impl IconShape for HiPlusCircle {
     fn view_box(&self) -> String {
@@ -3403,7 +3403,7 @@ impl IconShape for HiPlusCircle {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3414,7 +3414,7 @@ impl IconShape for HiPlusCircle {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiArrowNarrowDown;
 impl IconShape for HiArrowNarrowDown {
     fn view_box(&self) -> String {
@@ -3423,7 +3423,7 @@ impl IconShape for HiArrowNarrowDown {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3434,7 +3434,7 @@ impl IconShape for HiArrowNarrowDown {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiInformationCircle;
 impl IconShape for HiInformationCircle {
     fn view_box(&self) -> String {
@@ -3443,7 +3443,7 @@ impl IconShape for HiInformationCircle {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3454,7 +3454,7 @@ impl IconShape for HiInformationCircle {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCreditCard;
 impl IconShape for HiCreditCard {
     fn view_box(&self) -> String {
@@ -3463,7 +3463,7 @@ impl IconShape for HiCreditCard {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M4 4C2.89543 4 2 4.89543 2 6V7H18V6C18 4.89543 17.1046 4 16 4H4Z",
@@ -3477,7 +3477,7 @@ impl IconShape for HiCreditCard {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiUserCircle;
 impl IconShape for HiUserCircle {
     fn view_box(&self) -> String {
@@ -3486,7 +3486,7 @@ impl IconShape for HiUserCircle {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3497,7 +3497,7 @@ impl IconShape for HiUserCircle {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiLightningBolt;
 impl IconShape for HiLightningBolt {
     fn view_box(&self) -> String {
@@ -3506,7 +3506,7 @@ impl IconShape for HiLightningBolt {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3517,7 +3517,7 @@ impl IconShape for HiLightningBolt {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiOfficeBuilding;
 impl IconShape for HiOfficeBuilding {
     fn view_box(&self) -> String {
@@ -3526,7 +3526,7 @@ impl IconShape for HiOfficeBuilding {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3537,7 +3537,7 @@ impl IconShape for HiOfficeBuilding {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiPencil;
 impl IconShape for HiPencil {
     fn view_box(&self) -> String {
@@ -3546,7 +3546,7 @@ impl IconShape for HiPencil {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M13.5858 3.58579C14.3668 2.80474 15.6332 2.80474 16.4142 3.58579C17.1953 4.36683 17.1953 5.63316 16.4142 6.41421L15.6213 7.20711L12.7929 4.37868L13.5858 3.58579Z",
@@ -3558,7 +3558,7 @@ impl IconShape for HiPencil {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiStatusOffline;
 impl IconShape for HiStatusOffline {
     fn view_box(&self) -> String {
@@ -3567,7 +3567,7 @@ impl IconShape for HiStatusOffline {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M3.70711 2.29289C3.31658 1.90237 2.68342 1.90237 2.29289 2.29289C1.90237 2.68342 1.90237 3.31658 2.29289 3.70711L9.21426 10.6285C9.26325 10.6906 9.31947 10.7469 9.38164 10.7958L16.2929 17.7071C16.6834 18.0976 17.3166 18.0976 17.7071 17.7071C18.0976 17.3166 18.0976 16.6834 17.7071 16.2929L17.0323 15.6181C19.8626 12.0844 19.6398 6.91177 16.3641 3.63603C15.9736 3.24551 15.3404 3.24551 14.9499 3.63603C14.5593 4.02656 14.5593 4.65972 14.9499 5.05025C17.4435 7.54386 17.6625 11.4508 15.6068 14.1926L14.172 12.7578C15.4582 10.8164 15.2461 8.17494 13.5357 6.46446C13.1451 6.07394 12.512 6.07394 12.1214 6.46446C11.7309 6.85498 11.7309 7.48815 12.1214 7.87867C13.0451 8.80233 13.2406 10.1784 12.7078 11.2936L10.7164 9.30219C10.7103 9.29595 10.7042 9.28979 10.6979 9.2837L3.70711 2.29289Z",
@@ -3582,7 +3582,7 @@ impl IconShape for HiStatusOffline {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiUserGroup;
 impl IconShape for HiUserGroup {
     fn view_box(&self) -> String {
@@ -3591,7 +3591,7 @@ impl IconShape for HiUserGroup {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M13 6C13 7.65685 11.6569 9 10 9C8.34315 9 7 7.65685 7 6C7 4.34315 8.34315 3 10 3C11.6569 3 13 4.34315 13 6Z",
@@ -3615,7 +3615,7 @@ impl IconShape for HiUserGroup {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiDocumentDuplicate;
 impl IconShape for HiDocumentDuplicate {
     fn view_box(&self) -> String {
@@ -3624,7 +3624,7 @@ impl IconShape for HiDocumentDuplicate {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M9 2C7.89543 2 7 2.89543 7 4V12C7 13.1046 7.89543 14 9 14H15C16.1046 14 17 13.1046 17 12V6.41421C17 5.88378 16.7893 5.37507 16.4142 5L14 2.58579C13.6249 2.21071 13.1162 2 12.5858 2H9Z",
@@ -3636,7 +3636,7 @@ impl IconShape for HiDocumentDuplicate {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiClock;
 impl IconShape for HiClock {
     fn view_box(&self) -> String {
@@ -3645,7 +3645,7 @@ impl IconShape for HiClock {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3656,7 +3656,7 @@ impl IconShape for HiClock {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiPhone;
 impl IconShape for HiPhone {
     fn view_box(&self) -> String {
@@ -3665,7 +3665,7 @@ impl IconShape for HiPhone {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M2 3C2 2.44772 2.44772 2 3 2H5.15287C5.64171 2 6.0589 2.35341 6.13927 2.8356L6.87858 7.27147C6.95075 7.70451 6.73206 8.13397 6.3394 8.3303L4.79126 9.10437C5.90756 11.8783 8.12168 14.0924 10.8956 15.2087L11.6697 13.6606C11.866 13.2679 12.2955 13.0492 12.7285 13.1214L17.1644 13.8607C17.6466 13.9411 18 14.3583 18 14.8471V17C18 17.5523 17.5523 18 17 18H15C7.8203 18 2 12.1797 2 5V3Z",
@@ -3674,7 +3674,7 @@ impl IconShape for HiPhone {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiEye;
 impl IconShape for HiEye {
     fn view_box(&self) -> String {
@@ -3683,7 +3683,7 @@ impl IconShape for HiEye {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M10 12C11.1046 12 12 11.1046 12 10C12 8.89543 11.1046 8 10 8C8.89544 8 8.00001 8.89543 8.00001 10C8.00001 11.1046 8.89544 12 10 12Z",
@@ -3697,7 +3697,7 @@ impl IconShape for HiEye {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiLightBulb;
 impl IconShape for HiLightBulb {
     fn view_box(&self) -> String {
@@ -3706,7 +3706,7 @@ impl IconShape for HiLightBulb {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M11 3C11 2.44772 10.5523 2 10 2C9.44771 2 9 2.44772 9 3V4C9 4.55228 9.44771 5 10 5C10.5523 5 11 4.55228 11 4V3Z",
@@ -3733,7 +3733,7 @@ impl IconShape for HiLightBulb {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiPhoneMissedCall;
 impl IconShape for HiPhoneMissedCall {
     fn view_box(&self) -> String {
@@ -3742,7 +3742,7 @@ impl IconShape for HiPhoneMissedCall {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M2 3C2 2.44772 2.44772 2 3 2H5.15287C5.64171 2 6.0589 2.35341 6.13927 2.8356L6.87858 7.27147C6.95075 7.70451 6.73206 8.13397 6.3394 8.3303L4.79126 9.10437C5.90756 11.8783 8.12168 14.0924 10.8956 15.2087L11.6697 13.6606C11.866 13.2679 12.2955 13.0492 12.7285 13.1214L17.1644 13.8607C17.6466 13.9411 18 14.3583 18 14.8471V17C18 17.5523 17.5523 18 17 18H15C7.8203 18 2 12.1797 2 5V3Z",
@@ -3754,7 +3754,7 @@ impl IconShape for HiPhoneMissedCall {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiGift;
 impl IconShape for HiGift {
     fn view_box(&self) -> String {
@@ -3763,7 +3763,7 @@ impl IconShape for HiGift {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3780,7 +3780,7 @@ impl IconShape for HiGift {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiExternalLink;
 impl IconShape for HiExternalLink {
     fn view_box(&self) -> String {
@@ -3789,7 +3789,7 @@ impl IconShape for HiExternalLink {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M11 3C10.4477 3 10 3.44772 10 4C10 4.55228 10.4477 5 11 5H13.5858L7.29289 11.2929C6.90237 11.6834 6.90237 12.3166 7.29289 12.7071C7.68342 13.0976 8.31658 13.0976 8.70711 12.7071L15 6.41421V9C15 9.55228 15.4477 10 16 10C16.5523 10 17 9.55228 17 9V4C17 3.44772 16.5523 3 16 3H11Z",
@@ -3801,7 +3801,7 @@ impl IconShape for HiExternalLink {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiQuestionMarkCircle;
 impl IconShape for HiQuestionMarkCircle {
     fn view_box(&self) -> String {
@@ -3810,7 +3810,7 @@ impl IconShape for HiQuestionMarkCircle {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3821,7 +3821,7 @@ impl IconShape for HiQuestionMarkCircle {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiShare;
 impl IconShape for HiShare {
     fn view_box(&self) -> String {
@@ -3830,7 +3830,7 @@ impl IconShape for HiShare {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M15 8C16.6569 8 18 6.65685 18 5C18 3.34315 16.6569 2 15 2C13.3431 2 12 3.34315 12 5C12 5.12548 12.0077 5.24917 12.0227 5.37061L7.08259 7.84064C6.54303 7.32015 5.8089 7 5 7C3.34315 7 2 8.34315 2 10C2 11.6569 3.34315 13 5 13C5.80892 13 6.54306 12.6798 7.08263 12.1593L12.0227 14.6293C12.0077 14.7508 12 14.8745 12 15C12 16.6569 13.3431 18 15 18C16.6569 18 18 16.6569 18 15C18 13.3431 16.6569 12 15 12C14.1911 12 13.457 12.3201 12.9174 12.8406L7.97733 10.3706C7.9923 10.2492 8 10.1255 8 10C8 9.8745 7.99229 9.7508 7.97733 9.62934L12.9174 7.15932C13.4569 7.67984 14.1911 8 15 8Z",
@@ -3839,7 +3839,7 @@ impl IconShape for HiShare {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiArrowUp;
 impl IconShape for HiArrowUp {
     fn view_box(&self) -> String {
@@ -3848,7 +3848,7 @@ impl IconShape for HiArrowUp {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3859,7 +3859,7 @@ impl IconShape for HiArrowUp {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiFolderAdd;
 impl IconShape for HiFolderAdd {
     fn view_box(&self) -> String {
@@ -3868,7 +3868,7 @@ impl IconShape for HiFolderAdd {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M4 4C2.89543 4 2 4.89543 2 6V14C2 15.1046 2.89543 16 4 16H16C17.1046 16 18 15.1046 18 14V8C18 6.89543 17.1046 6 16 6H11L9 4H4ZM11 9C11 8.44771 10.5523 8 10 8C9.44772 8 9 8.44771 9 9V10H8C7.44772 10 7 10.4477 7 11C7 11.5523 7.44772 12 8 12H9V13C9 13.5523 9.44772 14 10 14C10.5523 14 11 13.5523 11 13V12H12C12.5523 12 13 11.5523 13 11C13 10.4477 12.5523 10 12 10H11V9Z",
@@ -3878,7 +3878,7 @@ impl IconShape for HiFolderAdd {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiFilter;
 impl IconShape for HiFilter {
     fn view_box(&self) -> String {
@@ -3887,7 +3887,7 @@ impl IconShape for HiFilter {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3898,7 +3898,7 @@ impl IconShape for HiFilter {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiArrowNarrowRight;
 impl IconShape for HiArrowNarrowRight {
     fn view_box(&self) -> String {
@@ -3907,7 +3907,7 @@ impl IconShape for HiArrowNarrowRight {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3918,7 +3918,7 @@ impl IconShape for HiArrowNarrowRight {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiPhoneIncoming;
 impl IconShape for HiPhoneIncoming {
     fn view_box(&self) -> String {
@@ -3927,7 +3927,7 @@ impl IconShape for HiPhoneIncoming {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M14.4142 7L17.7071 3.70711C18.0976 3.31658 18.0976 2.68342 17.7071 2.29289C17.3166 1.90237 16.6834 1.90237 16.2929 2.29289L13 5.58579V4C13 3.44772 12.5523 3 12 3C11.4477 3 11 3.44772 11 4V7.99931C11 8.00031 11 8.002 11 8.003C11.0004 8.1375 11.0273 8.26575 11.0759 8.38278C11.1236 8.49805 11.1937 8.6062 11.2864 8.70055C11.2907 8.70494 11.2951 8.70929 11.2995 8.7136C11.3938 8.80626 11.502 8.87643 11.6172 8.92412C11.7351 8.97301 11.8644 9 12 9H16C16.5523 9 17 8.55228 17 8C17 7.44772 16.5523 7 16 7H14.4142Z",
@@ -3939,7 +3939,7 @@ impl IconShape for HiPhoneIncoming {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiPhotograph;
 impl IconShape for HiPhotograph {
     fn view_box(&self) -> String {
@@ -3948,7 +3948,7 @@ impl IconShape for HiPhotograph {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3959,7 +3959,7 @@ impl IconShape for HiPhotograph {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCalendar;
 impl IconShape for HiCalendar {
     fn view_box(&self) -> String {
@@ -3968,7 +3968,7 @@ impl IconShape for HiCalendar {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -3979,7 +3979,7 @@ impl IconShape for HiCalendar {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiVideoCamera;
 impl IconShape for HiVideoCamera {
     fn view_box(&self) -> String {
@@ -3988,7 +3988,7 @@ impl IconShape for HiVideoCamera {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M2 6C2 4.89543 2.89543 4 4 4H10C11.1046 4 12 4.89543 12 6V14C12 15.1046 11.1046 16 10 16H4C2.89543 16 2 15.1046 2 14V6Z",
@@ -4000,7 +4000,7 @@ impl IconShape for HiVideoCamera {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiGlobe;
 impl IconShape for HiGlobe {
     fn view_box(&self) -> String {
@@ -4009,7 +4009,7 @@ impl IconShape for HiGlobe {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4020,7 +4020,7 @@ impl IconShape for HiGlobe {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiArrowLeft;
 impl IconShape for HiArrowLeft {
     fn view_box(&self) -> String {
@@ -4029,7 +4029,7 @@ impl IconShape for HiArrowLeft {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4040,7 +4040,7 @@ impl IconShape for HiArrowLeft {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiMinusCircle;
 impl IconShape for HiMinusCircle {
     fn view_box(&self) -> String {
@@ -4049,7 +4049,7 @@ impl IconShape for HiMinusCircle {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4060,7 +4060,7 @@ impl IconShape for HiMinusCircle {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiDesktopComputer;
 impl IconShape for HiDesktopComputer {
     fn view_box(&self) -> String {
@@ -4069,7 +4069,7 @@ impl IconShape for HiDesktopComputer {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4080,7 +4080,7 @@ impl IconShape for HiDesktopComputer {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiLockClosed;
 impl IconShape for HiLockClosed {
     fn view_box(&self) -> String {
@@ -4089,7 +4089,7 @@ impl IconShape for HiLockClosed {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4100,7 +4100,7 @@ impl IconShape for HiLockClosed {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiFingerPrint;
 impl IconShape for HiFingerPrint {
     fn view_box(&self) -> String {
@@ -4109,7 +4109,7 @@ impl IconShape for HiFingerPrint {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4130,7 +4130,7 @@ impl IconShape for HiFingerPrint {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCloud;
 impl IconShape for HiCloud {
     fn view_box(&self) -> String {
@@ -4139,7 +4139,7 @@ impl IconShape for HiCloud {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M5.5 16C3.567 16 2 14.433 2 12.5C2 10.6916 3.37146 9.20358 5.13102 9.01922C5.04553 8.69382 5 8.35223 5 8C5 5.79086 6.79086 4 9 4C10.8788 4 12.4551 5.29538 12.8845 7.04175C13.0857 7.01422 13.2912 7 13.5 7C15.9853 7 18 9.01472 18 11.5C18 13.9853 15.9853 16 13.5 16H5.5Z",
@@ -4148,7 +4148,7 @@ impl IconShape for HiCloud {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiDocumentRemove;
 impl IconShape for HiDocumentRemove {
     fn view_box(&self) -> String {
@@ -4157,7 +4157,7 @@ impl IconShape for HiDocumentRemove {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4168,7 +4168,7 @@ impl IconShape for HiDocumentRemove {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiRewind;
 impl IconShape for HiRewind {
     fn view_box(&self) -> String {
@@ -4177,7 +4177,7 @@ impl IconShape for HiRewind {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M8.4453 14.8321C8.75216 15.0366 9.1467 15.0557 9.47186 14.8817C9.79701 14.7077 10 14.3688 10 14L10 11.2019L15.4453 14.8321C15.7522 15.0366 16.1467 15.0557 16.4719 14.8817C16.797 14.7077 17 14.3688 17 14V6C17 5.63121 16.797 5.29235 16.4719 5.11833C16.1467 4.94431 15.7522 4.96338 15.4453 5.16795L10 8.79815V6C10 5.63121 9.79702 5.29235 9.47186 5.11833C9.1467 4.94431 8.75216 4.96338 8.4453 5.16795L2.4453 9.16795C2.1671 9.35342 2 9.66565 2 10C2 10.3344 2.1671 10.6466 2.4453 10.8321L8.4453 14.8321Z",
@@ -4186,7 +4186,7 @@ impl IconShape for HiRewind {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiSpeakerphone;
 impl IconShape for HiSpeakerphone {
     fn view_box(&self) -> String {
@@ -4195,7 +4195,7 @@ impl IconShape for HiSpeakerphone {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4206,7 +4206,7 @@ impl IconShape for HiSpeakerphone {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiUpload;
 impl IconShape for HiUpload {
     fn view_box(&self) -> String {
@@ -4215,7 +4215,7 @@ impl IconShape for HiUpload {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4226,7 +4226,7 @@ impl IconShape for HiUpload {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiTrendingDown;
 impl IconShape for HiTrendingDown {
     fn view_box(&self) -> String {
@@ -4235,7 +4235,7 @@ impl IconShape for HiTrendingDown {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4246,7 +4246,7 @@ impl IconShape for HiTrendingDown {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiPause;
 impl IconShape for HiPause {
     fn view_box(&self) -> String {
@@ -4255,7 +4255,7 @@ impl IconShape for HiPause {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4266,7 +4266,7 @@ impl IconShape for HiPause {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiBookmark;
 impl IconShape for HiBookmark {
     fn view_box(&self) -> String {
@@ -4275,7 +4275,7 @@ impl IconShape for HiBookmark {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M5 4C5 2.89543 5.89543 2 7 2H13C14.1046 2 15 2.89543 15 4V18L10 15.5L5 18V4Z",
@@ -4284,7 +4284,7 @@ impl IconShape for HiBookmark {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiSwitchVertical;
 impl IconShape for HiSwitchVertical {
     fn view_box(&self) -> String {
@@ -4293,7 +4293,7 @@ impl IconShape for HiSwitchVertical {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M5 12C5 12.5523 5.44771 13 6 13C6.55228 13 7 12.5523 7 12L7 6.41421L8.29289 7.70711C8.68342 8.09763 9.31658 8.09763 9.70711 7.70711C10.0976 7.31658 10.0976 6.68342 9.70711 6.29289L6.70711 3.29289C6.51957 3.10536 6.26522 3 6 3C5.73478 3 5.48043 3.10536 5.29289 3.29289L2.29289 6.29289C1.90237 6.68342 1.90237 7.31658 2.29289 7.70711C2.68342 8.09763 3.31658 8.09763 3.70711 7.70711L5 6.41421L5 12Z",
@@ -4305,7 +4305,7 @@ impl IconShape for HiSwitchVertical {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCurrencyDollar;
 impl IconShape for HiCurrencyDollar {
     fn view_box(&self) -> String {
@@ -4314,7 +4314,7 @@ impl IconShape for HiCurrencyDollar {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M8.43338 7.41784C8.58818 7.31464 8.77939 7.2224 9 7.15101L9.00001 8.84899C8.77939 8.7776 8.58818 8.68536 8.43338 8.58216C8.06927 8.33942 8 8.1139 8 8C8 7.8861 8.06927 7.66058 8.43338 7.41784Z",
@@ -4331,7 +4331,7 @@ impl IconShape for HiCurrencyDollar {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCloudDownload;
 impl IconShape for HiCloudDownload {
     fn view_box(&self) -> String {
@@ -4340,7 +4340,7 @@ impl IconShape for HiCloudDownload {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4351,7 +4351,7 @@ impl IconShape for HiCloudDownload {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiLockOpen;
 impl IconShape for HiLockOpen {
     fn view_box(&self) -> String {
@@ -4360,7 +4360,7 @@ impl IconShape for HiLockOpen {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M10 2C7.23858 2 5 4.23858 5 7V9C3.89543 9 3 9.89543 3 11V16C3 17.1046 3.89543 18 5 18H15C16.1046 18 17 17.1046 17 16V11C17 9.89543 16.1046 9 15 9H7V7C7 5.34315 8.34315 4 10 4C11.3965 4 12.5725 4.95512 12.9055 6.24926C13.0432 6.78411 13.5884 7.1061 14.1232 6.96844C14.6581 6.83078 14.9801 6.28559 14.8424 5.75074C14.2874 3.59442 12.3312 2 10 2Z",
@@ -4369,7 +4369,7 @@ impl IconShape for HiLockOpen {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiMenu;
 impl IconShape for HiMenu {
     fn view_box(&self) -> String {
@@ -4378,7 +4378,7 @@ impl IconShape for HiMenu {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4399,7 +4399,7 @@ impl IconShape for HiMenu {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiBackspace;
 impl IconShape for HiBackspace {
     fn view_box(&self) -> String {
@@ -4408,7 +4408,7 @@ impl IconShape for HiBackspace {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4419,7 +4419,7 @@ impl IconShape for HiBackspace {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiShoppingCart;
 impl IconShape for HiShoppingCart {
     fn view_box(&self) -> String {
@@ -4428,7 +4428,7 @@ impl IconShape for HiShoppingCart {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M3 1C2.44772 1 2 1.44772 2 2C2 2.55228 2.44772 3 3 3H4.21922L4.52478 4.22224C4.52799 4.23637 4.5315 4.25039 4.5353 4.26429L5.89253 9.69321L4.99995 10.5858C3.74002 11.8457 4.63235 14 6.41416 14H15C15.5522 14 16 13.5523 16 13C16 12.4477 15.5522 12 15 12L6.41417 12L7.41416 11H14C14.3788 11 14.725 10.786 14.8944 10.4472L17.8944 4.44721C18.0494 4.13723 18.0329 3.76909 17.8507 3.47427C17.6684 3.17945 17.3466 3 17 3H6.28078L5.97014 1.75746C5.85885 1.3123 5.45887 1 5 1H3Z",
@@ -4443,7 +4443,7 @@ impl IconShape for HiShoppingCart {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiSortAscending;
 impl IconShape for HiSortAscending {
     fn view_box(&self) -> String {
@@ -4452,7 +4452,7 @@ impl IconShape for HiSortAscending {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M3 3C2.44772 3 2 3.44772 2 4C2 4.55228 2.44772 5 3 5H14C14.5523 5 15 4.55228 15 4C15 3.44772 14.5523 3 14 3H3Z",
@@ -4470,7 +4470,7 @@ impl IconShape for HiSortAscending {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiCalculator;
 impl IconShape for HiCalculator {
     fn view_box(&self) -> String {
@@ -4479,7 +4479,7 @@ impl IconShape for HiCalculator {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4490,7 +4490,7 @@ impl IconShape for HiCalculator {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiChartSquareBar;
 impl IconShape for HiChartSquareBar {
     fn view_box(&self) -> String {
@@ -4499,7 +4499,7 @@ impl IconShape for HiChartSquareBar {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4510,7 +4510,7 @@ impl IconShape for HiChartSquareBar {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiShieldCheck;
 impl IconShape for HiShieldCheck {
     fn view_box(&self) -> String {
@@ -4519,7 +4519,7 @@ impl IconShape for HiShieldCheck {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4530,7 +4530,7 @@ impl IconShape for HiShieldCheck {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiClipboardCopy;
 impl IconShape for HiClipboardCopy {
     fn view_box(&self) -> String {
@@ -4539,7 +4539,7 @@ impl IconShape for HiClipboardCopy {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M8 2C7.44772 2 7 2.44772 7 3C7 3.55228 7.44772 4 8 4H10C10.5523 4 11 3.55228 11 3C11 2.44772 10.5523 2 10 2H8Z",
@@ -4554,7 +4554,7 @@ impl IconShape for HiClipboardCopy {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiPresentationChartBar;
 impl IconShape for HiPresentationChartBar {
     fn view_box(&self) -> String {
@@ -4563,7 +4563,7 @@ impl IconShape for HiPresentationChartBar {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4574,7 +4574,7 @@ impl IconShape for HiPresentationChartBar {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiFolder;
 impl IconShape for HiFolder {
     fn view_box(&self) -> String {
@@ -4583,7 +4583,7 @@ impl IconShape for HiFolder {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M2 6C2 4.89543 2.89543 4 4 4H9L11 6H16C17.1046 6 18 6.89543 18 8V14C18 15.1046 17.1046 16 16 16H4C2.89543 16 2 15.1046 2 14V6Z",
@@ -4592,7 +4592,7 @@ impl IconShape for HiFolder {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiUsers;
 impl IconShape for HiUsers {
     fn view_box(&self) -> String {
@@ -4601,7 +4601,7 @@ impl IconShape for HiUsers {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M9 6C9 7.65685 7.65685 9 6 9C4.34315 9 3 7.65685 3 6C3 4.34315 4.34315 3 6 3C7.65685 3 9 4.34315 9 6Z",
@@ -4619,7 +4619,7 @@ impl IconShape for HiUsers {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiColorSwatch;
 impl IconShape for HiColorSwatch {
     fn view_box(&self) -> String {
@@ -4628,7 +4628,7 @@ impl IconShape for HiColorSwatch {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4639,7 +4639,7 @@ impl IconShape for HiColorSwatch {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiClipboardCheck;
 impl IconShape for HiClipboardCheck {
     fn view_box(&self) -> String {
@@ -4648,7 +4648,7 @@ impl IconShape for HiClipboardCheck {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M9 2C8.44772 2 8 2.44772 8 3C8 3.55228 8.44772 4 9 4H11C11.5523 4 12 3.55228 12 3C12 2.44772 11.5523 2 11 2H9Z",
@@ -4662,7 +4662,7 @@ impl IconShape for HiClipboardCheck {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiMinus;
 impl IconShape for HiMinus {
     fn view_box(&self) -> String {
@@ -4671,7 +4671,7 @@ impl IconShape for HiMinus {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4682,7 +4682,7 @@ impl IconShape for HiMinus {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiChevronDoubleDown;
 impl IconShape for HiChevronDoubleDown {
     fn view_box(&self) -> String {
@@ -4691,7 +4691,7 @@ impl IconShape for HiChevronDoubleDown {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4702,7 +4702,7 @@ impl IconShape for HiChevronDoubleDown {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiChevronLeft;
 impl IconShape for HiChevronLeft {
     fn view_box(&self) -> String {
@@ -4711,7 +4711,7 @@ impl IconShape for HiChevronLeft {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4722,7 +4722,7 @@ impl IconShape for HiChevronLeft {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiAnnotation;
 impl IconShape for HiAnnotation {
     fn view_box(&self) -> String {
@@ -4731,7 +4731,7 @@ impl IconShape for HiAnnotation {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4742,7 +4742,7 @@ impl IconShape for HiAnnotation {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiFilm;
 impl IconShape for HiFilm {
     fn view_box(&self) -> String {
@@ -4751,7 +4751,7 @@ impl IconShape for HiFilm {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4762,7 +4762,7 @@ impl IconShape for HiFilm {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiMoon;
 impl IconShape for HiMoon {
     fn view_box(&self) -> String {
@@ -4771,7 +4771,7 @@ impl IconShape for HiMoon {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M17.2929 13.2929C16.2886 13.7471 15.1738 13.9999 14 13.9999C9.58172 13.9999 6 10.4182 6 5.9999C6 4.82593 6.25287 3.71102 6.70712 2.70667C3.93137 3.96191 2 6.75526 2 9.9997C2 14.418 5.58172 17.9997 10 17.9997C13.2443 17.9997 16.0376 16.0685 17.2929 13.2929Z",
@@ -4780,7 +4780,7 @@ impl IconShape for HiMoon {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiExclamation;
 impl IconShape for HiExclamation {
     fn view_box(&self) -> String {
@@ -4789,7 +4789,7 @@ impl IconShape for HiExclamation {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4800,7 +4800,7 @@ impl IconShape for HiExclamation {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiDotsVertical;
 impl IconShape for HiDotsVertical {
     fn view_box(&self) -> String {
@@ -4809,7 +4809,7 @@ impl IconShape for HiDotsVertical {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M10 6C8.89543 6 8 5.10457 8 4C8 2.89543 8.89543 2 10 2C11.1046 2 12 2.89543 12 4C12 5.10457 11.1046 6 10 6Z",
@@ -4824,7 +4824,7 @@ impl IconShape for HiDotsVertical {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiChevronDoubleUp;
 impl IconShape for HiChevronDoubleUp {
     fn view_box(&self) -> String {
@@ -4833,7 +4833,7 @@ impl IconShape for HiChevronDoubleUp {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4844,7 +4844,7 @@ impl IconShape for HiChevronDoubleUp {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiHeart;
 impl IconShape for HiHeart {
     fn view_box(&self) -> String {
@@ -4853,7 +4853,7 @@ impl IconShape for HiHeart {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4864,7 +4864,7 @@ impl IconShape for HiHeart {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiTrendingUp;
 impl IconShape for HiTrendingUp {
     fn view_box(&self) -> String {
@@ -4873,7 +4873,7 @@ impl IconShape for HiTrendingUp {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 clip_rule: "evenodd",
@@ -4884,7 +4884,7 @@ impl IconShape for HiTrendingUp {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct HiAcademicCap;
 impl IconShape for HiAcademicCap {
     fn view_box(&self) -> String {
@@ -4893,7 +4893,7 @@ impl IconShape for HiAcademicCap {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M10.3939 2.08085C10.1424 1.97305 9.85763 1.97305 9.60608 2.08085L2.60608 5.08085C2.2384 5.23843 2 5.59997 2 6C2 6.40003 2.2384 6.76157 2.60608 6.91915L5.25037 8.05241C5.34653 7.94347 5.46706 7.85473 5.60608 7.79515L9.60608 6.08087C10.1137 5.86331 10.7016 6.09846 10.9191 6.60609C11.1367 7.11372 10.9015 7.7016 10.3939 7.91916L7.66668 9.08797L9.60608 9.91915C9.85763 10.027 10.1424 10.027 10.3939 9.91915L17.3939 6.91915C17.7616 6.76157 18 6.40003 18 6C18 5.59997 17.7616 5.23843 17.3939 5.08085L10.3939 2.08085Z",

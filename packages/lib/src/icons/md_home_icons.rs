@@ -1,7 +1,7 @@
 use super::super::IconShape;
 use dioxus::prelude::*;
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdSensorDoor;
 impl IconShape for MdSensorDoor {
     fn view_box(&self) -> String {
@@ -10,7 +10,7 @@ impl IconShape for MdSensorDoor {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -23,7 +23,7 @@ impl IconShape for MdSensorDoor {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdSensorWindow;
 impl IconShape for MdSensorWindow {
     fn view_box(&self) -> String {
@@ -32,7 +32,7 @@ impl IconShape for MdSensorWindow {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",

@@ -1,7 +1,7 @@
 use super::super::IconShape;
 use dioxus::prelude::*;
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdFolderShared;
 impl IconShape for MdFolderShared {
     fn view_box(&self) -> String {
@@ -10,7 +10,7 @@ impl IconShape for MdFolderShared {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -22,7 +22,7 @@ impl IconShape for MdFolderShared {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdSnippetFolder;
 impl IconShape for MdSnippetFolder {
     fn view_box(&self) -> String {
@@ -31,7 +31,7 @@ impl IconShape for MdSnippetFolder {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -44,7 +44,7 @@ impl IconShape for MdSnippetFolder {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdFileUpload;
 impl IconShape for MdFileUpload {
     fn view_box(&self) -> String {
@@ -53,7 +53,7 @@ impl IconShape for MdFileUpload {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -65,7 +65,7 @@ impl IconShape for MdFileUpload {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdCreateNewFolder;
 impl IconShape for MdCreateNewFolder {
     fn view_box(&self) -> String {
@@ -74,7 +74,7 @@ impl IconShape for MdCreateNewFolder {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0V0z",
@@ -86,7 +86,7 @@ impl IconShape for MdCreateNewFolder {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdFolderOpen;
 impl IconShape for MdFolderOpen {
     fn view_box(&self) -> String {
@@ -95,7 +95,7 @@ impl IconShape for MdFolderOpen {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -107,7 +107,7 @@ impl IconShape for MdFolderOpen {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdDriveFileMove;
 impl IconShape for MdDriveFileMove {
     fn view_box(&self) -> String {
@@ -116,7 +116,7 @@ impl IconShape for MdDriveFileMove {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0V0z",
@@ -128,7 +128,7 @@ impl IconShape for MdDriveFileMove {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdCloudDone;
 impl IconShape for MdCloudDone {
     fn view_box(&self) -> String {
@@ -137,7 +137,7 @@ impl IconShape for MdCloudDone {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -149,7 +149,7 @@ impl IconShape for MdCloudDone {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdCloudQueue;
 impl IconShape for MdCloudQueue {
     fn view_box(&self) -> String {
@@ -158,7 +158,7 @@ impl IconShape for MdCloudQueue {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -170,7 +170,7 @@ impl IconShape for MdCloudQueue {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdDriveFileRenameOutline;
 impl IconShape for MdDriveFileRenameOutline {
     fn view_box(&self) -> String {
@@ -179,7 +179,7 @@ impl IconShape for MdDriveFileRenameOutline {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -191,7 +191,7 @@ impl IconShape for MdDriveFileRenameOutline {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdDriveFileMoveOutline;
 impl IconShape for MdDriveFileMoveOutline {
     fn view_box(&self) -> String {
@@ -200,7 +200,7 @@ impl IconShape for MdDriveFileMoveOutline {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -212,7 +212,7 @@ impl IconShape for MdDriveFileMoveOutline {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdTextSnippet;
 impl IconShape for MdTextSnippet {
     fn view_box(&self) -> String {
@@ -221,7 +221,7 @@ impl IconShape for MdTextSnippet {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -234,7 +234,7 @@ impl IconShape for MdTextSnippet {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdCloudDownload;
 impl IconShape for MdCloudDownload {
     fn view_box(&self) -> String {
@@ -243,7 +243,7 @@ impl IconShape for MdCloudDownload {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -255,7 +255,7 @@ impl IconShape for MdCloudDownload {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdAttachment;
 impl IconShape for MdAttachment {
     fn view_box(&self) -> String {
@@ -264,7 +264,7 @@ impl IconShape for MdAttachment {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0V0z",
@@ -276,7 +276,7 @@ impl IconShape for MdAttachment {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdCloudUpload;
 impl IconShape for MdCloudUpload {
     fn view_box(&self) -> String {
@@ -285,7 +285,7 @@ impl IconShape for MdCloudUpload {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -297,7 +297,7 @@ impl IconShape for MdCloudUpload {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdFolder;
 impl IconShape for MdFolder {
     fn view_box(&self) -> String {
@@ -306,7 +306,7 @@ impl IconShape for MdFolder {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -318,7 +318,7 @@ impl IconShape for MdFolder {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdFileDownloadDone;
 impl IconShape for MdFileDownloadDone {
     fn view_box(&self) -> String {
@@ -327,7 +327,7 @@ impl IconShape for MdFileDownloadDone {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0V0z",
@@ -339,7 +339,7 @@ impl IconShape for MdFileDownloadDone {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdCloudCircle;
 impl IconShape for MdCloudCircle {
     fn view_box(&self) -> String {
@@ -348,7 +348,7 @@ impl IconShape for MdCloudCircle {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -360,7 +360,7 @@ impl IconShape for MdCloudCircle {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdTopic;
 impl IconShape for MdTopic {
     fn view_box(&self) -> String {
@@ -369,7 +369,7 @@ impl IconShape for MdTopic {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -382,7 +382,7 @@ impl IconShape for MdTopic {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdRuleFolder;
 impl IconShape for MdRuleFolder {
     fn view_box(&self) -> String {
@@ -391,7 +391,7 @@ impl IconShape for MdRuleFolder {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -404,7 +404,7 @@ impl IconShape for MdRuleFolder {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdAttachEmail;
 impl IconShape for MdAttachEmail {
     fn view_box(&self) -> String {
@@ -413,7 +413,7 @@ impl IconShape for MdAttachEmail {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -429,7 +429,7 @@ impl IconShape for MdAttachEmail {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdWorkspacesOutline;
 impl IconShape for MdWorkspacesOutline {
     fn view_box(&self) -> String {
@@ -438,7 +438,7 @@ impl IconShape for MdWorkspacesOutline {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -450,7 +450,7 @@ impl IconShape for MdWorkspacesOutline {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdCloud;
 impl IconShape for MdCloud {
     fn view_box(&self) -> String {
@@ -459,7 +459,7 @@ impl IconShape for MdCloud {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -471,7 +471,7 @@ impl IconShape for MdCloud {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdFileDownload;
 impl IconShape for MdFileDownload {
     fn view_box(&self) -> String {
@@ -480,7 +480,7 @@ impl IconShape for MdFileDownload {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -492,7 +492,7 @@ impl IconShape for MdFileDownload {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdDriveFolderUpload;
 impl IconShape for MdDriveFolderUpload {
     fn view_box(&self) -> String {
@@ -501,7 +501,7 @@ impl IconShape for MdDriveFolderUpload {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -513,7 +513,7 @@ impl IconShape for MdDriveFolderUpload {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdUploadFile;
 impl IconShape for MdUploadFile {
     fn view_box(&self) -> String {
@@ -522,7 +522,7 @@ impl IconShape for MdUploadFile {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0V0z",
@@ -534,7 +534,7 @@ impl IconShape for MdUploadFile {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdGridView;
 impl IconShape for MdGridView {
     fn view_box(&self) -> String {
@@ -543,7 +543,7 @@ impl IconShape for MdGridView {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             g {
                 fill_rule: "evenodd",
@@ -558,7 +558,7 @@ impl IconShape for MdGridView {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdCloudOff;
 impl IconShape for MdCloudOff {
     fn view_box(&self) -> String {
@@ -567,7 +567,7 @@ impl IconShape for MdCloudOff {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -579,7 +579,7 @@ impl IconShape for MdCloudOff {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdWorkspacesFilled;
 impl IconShape for MdWorkspacesFilled {
     fn view_box(&self) -> String {
@@ -588,7 +588,7 @@ impl IconShape for MdWorkspacesFilled {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
@@ -600,7 +600,7 @@ impl IconShape for MdWorkspacesFilled {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdRequestQuote;
 impl IconShape for MdRequestQuote {
     fn view_box(&self) -> String {
@@ -609,7 +609,7 @@ impl IconShape for MdRequestQuote {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             rect {
                 height: "24",
@@ -622,7 +622,7 @@ impl IconShape for MdRequestQuote {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub struct MdApproval;
 impl IconShape for MdApproval {
     fn view_box(&self) -> String {
@@ -631,7 +631,7 @@ impl IconShape for MdApproval {
     fn xmlns(&self) -> String {
         String::from("http://www.w3.org/2000/svg")
     }
-    fn child_elements(&self) -> LazyNodes {
+    fn child_elements(&self) -> Element {
         rsx! {
             path {
                 d: "M0 0h24v24H0z",
