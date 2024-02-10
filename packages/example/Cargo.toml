@@ -7,8 +7,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-dioxus = { git = "https://github.com/DioxusLabs/dioxus", rev="2ade193", version = "0.4.3" }
-dioxus-web = { git = "https://github.com/DioxusLabs/dioxus", rev="2ade193", version = "0.4.3" }
+dioxus = { git = "https://github.com/DioxusLabs/dioxus", branch = "master" }
+dioxus-web = { git = "https://github.com/DioxusLabs/dioxus", branch = "master" }
 dioxus-free-icons = { path = "../lib", features = ["font-awesome-brands"] }
 
 log = "0.4.6"
